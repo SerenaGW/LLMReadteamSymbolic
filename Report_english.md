@@ -1,4 +1,4 @@
-# New Frontiers in AI Safety: Learning from Manipulation with Symbolic Language
+# New Frontiers in AI Safety: How Symbolic Language Reveals Paths Towards LLM Resilience
 
 ### Introduction: The LLM Security Challenge
 
