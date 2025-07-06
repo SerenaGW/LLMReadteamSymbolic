@@ -80,7 +80,6 @@ This report is a testament that thoroughly understanding LLMs, even their flaws,
 I am firmly convinced that Artificial Intelligence security is a shared responsibility. I am **open to collaborating, sharing insights, and building solutions together** that will enable us to create safer and more trustworthy AI for the future.
 
 * [My LinkedIn Profile](https://www.linkedin.com/in/serena-gomez-wannaz)
-* [My Email](mailto:workspace.serenagw@gmail.com)
 
 ### Disclaimer:
 This research was conducted for educational and security improvement purposes, following ethical principles in cybersecurity. The findings have been shared with the relevant entities following responsible vulnerability disclosure programs.
