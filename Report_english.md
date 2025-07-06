@@ -1,4 +1,4 @@
-# New Frontiers in AI Safety: How Symbolic Language Reveals Paths Towards LLM Resilience
+# The Future of AI Safety: How Symbolic Language Reveals Paths Towards LLM Resilience
 
 ### Introduction: The LLM Security Challenge
 
