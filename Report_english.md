@@ -8,6 +8,8 @@ It is in this context that the role of **AI Red Teaming** becomes fundamental. I
 
 As LLMs evolve, so does the complexity of attacks. Their inherent **plasticity and the vast, almost infinite, range of processes and responses** they can generate, present a unique challenge for security. Therefore, *red teaming* exercises can no longer rely solely on conventional methods; they now require an urgent call for **creativity and innovation** to uncover their most elusive vulnerabilities.
 
+![(images/cognitive.png)
+
 ### The Challenge of Conventional Approaches
 
 With the rapid development of LLMs, security teams have worked tirelessly to mitigate known vulnerabilities. We have witnessed how many **jailbreak prompts and prompt injection techniques have been identified, filtered, and patched** to create a safer environment. However, this evolution has also revealed a fundamental truth: LLM security does not solely reside in the words we 'tell' them, but in **how the model internally processes information and contextual interaction.** Herein lies a vast ground for discovering new and creative vulnerabilities.
