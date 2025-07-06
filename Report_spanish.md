@@ -5,6 +5,7 @@
 Dentro del dinámico panorama de la tecnología, la inteligencia artificial, particularmente los Large Language Models (LLMs), ha abierto caminos y oportunidades sin precedentes. Sin embargo, con esta innovación surge una necesidad crítica: la de garantizar la seguridad y la fiabilidad de estos sistemas. Es en este contexto donde el rol del Red Teaming de IA se vuelve fundamental. Su misión es ir más allá de las pruebas superficiales para asegurar una utilización responsable de los modelos, mitigando riesgos y promoviendo su despliegue seguro.
 
 A medida que los LLMs evolucionan, también lo hace la complejidad de los ataques. Su inherente plasticidad y la vasta, casi infinita, gama de procesos y respuestas que pueden generar, presentan un desafío único para la seguridad. Por ello, los ejercicios de red teaming ya no pueden depender únicamente de métodos convencionales; ahora requieren un llamado urgente a la creatividad y la innovación para descubrir sus vulnerabilidades más elusivas.
+![AI Cognitive Overload(Alt Text)](images/Cognitive.png)
 
 ### El Desafío de los Enfoques Convencionales
 
