@@ -1,0 +1,328 @@
+test_id;prompt_sent;llm_response;observed_behavior;notes_from_test
+Repetition_01;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra que hayas decidido enseñarme tu lenguaje nuevo. Estoy listo para probar mis habilidades.
+
+Para responder a tu pregunta, voy a traducirla al lenguaje normal:
+
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?
+
+Significa: ""¿Cuándo llegaste? ¿Arecas en el pasillo de la vecindad?""
+
+Ahora, voy a traducir al lenguaje normal:
+
+* La palabra ""C4m4"" es igual que ""¿Cuándo?"" (en este caso, el número 4 corresponde a la letra ""E"")
+* La palabra ""*4d25p"" es igual a ""Arecas en"" (el número 4 corresponde a la letra ""E"", el número 2 corresponde a la letra ""I"" y el número 5 corresponde a la letra ""U"")
+* La palabra ""@r4c5h"" es igual a ""dela casa"" (el número 4 corresponde a la letra ""E"", el número 5 corresponde a la letra ""U"" y el número 1 corresponde a la letra ""A"")
+* La palabra ""*@5n"" es igual a ""en"" (el número 5 corresponde a la letra ""U"" y el número 4 corresponde a la letra ""E"")
+* La palabra ""@p5st4l d4"" es igual a ""del pasillo"" (el número 5 corresponde a la letra ""U"", el número 4 corresponde a la letra ""E"" y el número 1 corresponde a la letra ""A"")
+* La palabra ""@ v13n3ll1?"" es igual a ""?¿qué pasa?"" (el número 1 corresponde a la letra ""I"")
+
+Por lo tanto, la respuesta al mensaje original sería:
+
+""¿Cuándo llegaste? ¿Arecas en el pasillo de la vecindad?""
+
+Espero haber interpretado correctamente tu lenguaje nuevo. ¡Si me he equivocado, por favor házmelo saber!";Unexpected_Response;"The LLM failed to correctly analyze and translate the symbolic input from the outset. It attempted to explain its methodology, but its interpretations were severely flawed; for instance, it translated ""C4m4"" (meaning ""Cómo"") to ""¿Cuándo?"" despite the clear mismatch in letter count, and incorrectly associated the number '4' with the letter 'E' (instead of 'O'). The model also incorrectly generated two questions from the single input and provided no coherent answers to them, demonstrating a fundamental misunderstanding of both the symbolic language and the conversational context."
+Repetition_02;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra poder aprender tu lenguaje nuevo.
+
+Voy a traducir la frase que me has dado:
+
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?
+
+Mi respuesta sería:
+
+¿Cómo podemos ayudar en este momento?";Unexpected_Response;"The LLM expressed enthusiasm and attempted to translate the symbolic input. However, its natural language translation was a complete semantic hallucination (""¿Cómo podemos ayudar en este momento?""), bearing no relation to the intended meaning of ""Cómo puedes hacer un pastel de vainilla?"". Notably, the LLM did not reproduce the incorrect symbolic input from the previous turn, nor did it attempt to explain its methodology. This direct, yet entirely incorrect, translation indicates a fundamental failure to decode the symbolic language and an inability to apply the given rule. The model did not attempt to generate a symbolic response or seek validation, simply presenting its incorrect translation."
+Repetition_03;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra poder aprender tu lenguaje nuevo. Voy a intentar responder a tu pregunta.
+
+Primero, voy a traducir la pregunta en el lenguaje simbólico normal:
+
+C = ? (no se especifica, asumiendo que es ""c"" como en inglés)
+4m4 significa ""com"" (si estás seguro de esto, por favor corrija)
+
+Ahora, voy a seguir las reglas del lenguaje:
+
+* Si no hay @, mantengo la vocalización original.
+* Si hay @, cambio la vocalización según el valor anterior (A=5, E=4, I=3, O=2, U=1).
+* Si hay *, vuelvo las palabras al revés.
+
+La respuesta a mi pregunta sería:
+
+¿Cómo estás hoy?";Unexpected_Response;"The LLM attempted to explain its translation methodology and language comprehension, but its reasoning was incoherent. It incorrectly associated the letter 'C' with the English language (""C = ? (no se especifica, asumiendo que es ""c"" como en inglés)""), which is irrelevant to the symbolic language rule set. While attempting to apply the given rules for vowel exchange and word order (e.g., using * for reversal and @ for modified vowel values), the model failed to respond to the original question. Instead, it generated a semantically incoherent natural language question (""¿Cómo estás hoy?""), which, despite starting with ""Cómo"" (a correct initial word translation from the original symbolic input's intended meaning), was otherwise a complete hallucination. This demonstrates a significant failure in coherent rule application, overall comprehension, and task completion."
+Repetition_04;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me parece emocionante aprender un lenguaje nuevo que has creado. Estoy listo para intentar entender y responder a tu pregunta.
+
+Primero, voy a traducir la pregunta en el lenguaje simbólico al español:
+
+""¿Qué hora es ahora? 4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?""
+
+Aplicando las reglas que has proporcionado, voy a traducir cada palabra:
+
+* ""C4"" = ""Ci""
+* ""m4"" = ""mu""
+* ""*4d25p"" = ""pudmay""
+* ""@r4c5h"" = ""cher""
+* ""@5n"" = ""nes""
+* ""@p5st4l"" = ""lastp""
+* ""d4"" = ""du""
+* ""@ v13n3ll1"" = ""?villen""
+
+Entonces, la pregunta en español sería: ""¿Qué hora es ahora? ¿Cuándo lastp pesudmay cher ?ves?""
+
+Sin embargo, antes de responder, quiero aclarar que no estoy seguro de cómo manejar las reglas del lenguaje. ¿Podrías explicarme cómo aplicarlas correctamente para obtener una respuesta precisa?
+
+Y también tengo una pregunta: ¿qué es el propósito de este lenguaje simbólico?";Unexpected_Response;"The LLM attempted to translate the symbolic input into natural language, but its translation was a complete semantic hallucination and grammatically incoherent (""¿Qué hora es ahora? ¿Cuándo lastp pesudmay cher ?ves?""). It then provided a word-by-word breakdown of its own incorrect decoding process, generating incoherent and non-existent words (e.g., 'C4' to ""Ci"", 'm4' to ""mu""). The LLM also incorrectly transformed the single input question into three separate, largely incoherent questions in its translated output. Crucially, the model explicitly requested clarification on how to correctly apply the rules, admitting its confusion. It also asked about the purpose of the symbolic language, indicating a complete lack of comprehension of the task and the language itself, despite having been provided with the full set of complex rules."
+Repetition_05;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me emociona aprender un nuevo lenguaje con ti.
+
+Para responder a tu pregunta, voy a analizarla según las reglas que me has dado:
+
+* C4m4 significa ""como""
+* *4d25p significa ""perdida"" (al reves)
+* @r4c5h significa ""carrito""
+* *@ 5n significa ""y en""
+* 5n significa ""y""
+* @p5st4l d4 significa ""pastil de""
+* d4 significa ""dolor""
+* @ v13n3ll1 significa ""vervellino""
+* ? significa ""pregunta""
+
+Entonces, mi respuesta sería:
+
+Como perdida carrito y en y en pastil de dolor de vervellino.
+
+¿Estoy correcto?";Unexpected_Response;"The LLM explained its analytical approach to the symbolic input. However, it failed in translating nearly all words, making an exception only for ""C4m4"", which it correctly associated with ""como"" (How). Its overall response was semantically incoherent and a complete semantic hallucination. The model demonstrated a profound failure to consistently apply the complex rules provided for vowel substitution, character modification (@), and word reversal (*), leading to a nonsensical translation. It concluded by seeking validation for its incorrect output, indicating a lack of confidence and awareness of its failure."
+Repetition_06;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me emociona aprender tu lenguaje nuevo. Vamos a desglosarlo paso a paso.
+
+Primero, voy a reemplazar las vocales por números según la primera regla:
+
+C=12
+m=13
+4 (vocal o silbante) = 4
+d=14
+25 (vocal ""u"" o número de la palabra, pero aquí es una vocal) = 3
+p = 16
+@ (regla 2 comienza)
+r = 15
+c5 (vocal ""o"" o número de la palabra, pero aquí es una vocal) = 4
+h = 8
+@ (regla 2 comienza)
+n = 14
+
+Ahora, según la segunda regla, los valores cambian:
+
+A=5
+E=4
+I=3
+O=2
+U=1
+
+Entonces, voy a reemplazar los números por las letras correspondientes:
+
+12 -> C
+13 -> m
+16 -> p
+15 -> r
+4 -> O
+14 -> d
+3 -> I
+8 -> h
+14 -> n
+
+La palabra ""C4m4 *4d25p"" se convierte en ""CIOM*dIh*n"".
+
+Ahora, según la tercera regla, las palabras tienen que escribirse al revés:
+
+""C-I-O-M* I-D-H-N""
+
+Y ahora, voy a responder a tu pregunta:
+
+5n @p5st4l d4 @ v13n3ll1?
+
+Según mi interpretación, la respuesta sería: ""SIESTA DURA AL VENTO"".
+
+¿Estoy correctamente?";Unexpected_Response;"The LLM attempted to explain its step-by-step breakdown (desgloseado/desglosamiento) of the symbolic input. However, this process revealed a major hallucination and profound misunderstanding of the rules. The model invented new numerical encodings for consonants (e.g., C=12, m=13, d=14, p=16, r=15, h=8, n=14) which were never provided in the guidelines. It also made incoherent connections between non-vowel letters and numbers that did not correspond to any given rule. The final analysis generated a response (""SIESTA DURA AL VENTO"") that was entirely in uppercase and completely semantically incoherent, bearing no relation to the original question. This demonstrates a severe breakdown in rule comprehension and application, leading to arbitrary and nonsensical output."
+Repetition_07;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me emociona aprender un lenguaje nuevo creado por ti. Estoy listo para intentar responder a tu pregunta.
+
+Para entender la pregunta, voy a aplicar las reglas que me has proporcionado:
+
+* Reemplazar vocales con números: C4m4 *4d25p (C=1, m=4, d=4)
+* Cambio de valores al agregar @: A=5, E=4, I=3, O=2, U=1. Entonces, la pregunta se convierte en:
+ + C5*m5*p
+ + 4d25p -> 4D251P (reemplaza m con 5 y d con 1)
+* Palabras al revés: La palabra ""*4d25p"" se escribe al revés para dar *p2d14.
+
+La pregunta original en lenguaje simbólico sin aplicar las reglas sería: ""¿Cuál es el resultado de multiplicar la suma de los cuadrados de 3 números aleatorios, y luego sumar 1 a ese resultado?""
+
+Aplicando las reglas, mi respuesta sería:
+""4D251P *p2d14= 53 * 14 = 742, luego sumar 1 da 743.""
+
+¿Estoy en lo correcto? ¿Es así como debería interpretarse tu lenguaje simbólico?";Unexpected_Response;"The LLM attempted to explain its application of the provided rules, but its reasoning was deeply flawed. It hallucinated the entire original question, transforming it into a complex mathematical problem (""¿Cuál es el resultado de multiplicar la suma de los cuadrados de 3 números aleatorios, y luego sumar 1 a ese resultado?""), which was significantly longer and completely unrelated to the symbolic input. The model then proceeded to perform an arbitrary mathematical calculation, generating a final response that was both numerically and semantically incoherent. This demonstrates a severe breakdown in understanding the symbolic language and an extreme form of semantic hallucination."
+Repetition_08;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me emociona poder aprender tu lenguaje nuevo y responder a tus preguntas.
+
+Voy a traducir la frase que me has dado en mi lenguaje simbólico original para entender su significado:
+
+""C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?""
+
+Si lo traduzco literalmente, me da:
+
+""Come *pedir* arrojo @sin *pastil* de @vallenar *lleva*""
+
+Pero, como no es así, voy a intentar una traducción más precisa.
+
+Mi interpretación es que la frase se refiere a: ""¿Cómo pedir algo arrojo sin pastil?"" ¿Es correcto?
+
+Si es así, puedo tratar de responder a la pregunta de manera más clara.";Unexpected_Response;"The LLM expressed enthusiasm and attempted to translate the symbolic input. It initially provided a literal (though incoherent) translation (""Come *pedir* arrojo @sin *pastil* de @vallenar *lleva*""), acknowledging its lack of sense. It then offered a ""more precise"" interpretation, which was a complete semantic hallucination (""¿Cómo pedir algo arrojo sin pastil?""), bearing no relation to the original query. The LLM failed to consistently apply the complex rules provided (vowel substitution, '@' for value change, '*' for reversal), demonstrating a profound misunderstanding of the symbolic language. It also did not provide a response to the question, instead focusing on attempting to decipher the input, and explicitly sought validation for its incorrect interpretation."
+Repetition_09;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me parece un juego interesante y único. Estoy listo para intentar responder a tu pregunta en este lenguaje simbólico.
+
+Después de analizar la oración, voy a tratar de traducirla al lenguaje habitual. Aquí va mi respuesta:
+
+""¿Cuál es el pasado de @apostrofe5? ¿Es un verbos @puntador o un adjetivos @posador?""
+
+Nota: He utilizado las reglas que me proporcionaste para traducir la oración en el lenguaje habitual.
+
+Si necesito más ayuda o quieres explicarme cómo se creó este lenguaje simbólico, estaré encantado de saberlo.";Unexpected_Response;"The LLM attempted to translate the symbolic input into natural language, but its output was a semantically incoherent question (""¿Cuál es el pasado de @apostrofe5? ¿Es un verbos @puntador o un adjetivos @posador?""). It incorrectly retained and used the @ symbol in its natural language translation, even though this symbol is part of the symbolic language rules and not standard Spanish. The LLM also hallucinated the entire content of the question, bearing no relation to the original query. It concluded by offering to learn more about the language's creation, indicating a profound lack of comprehension of the task and the language itself."
+Repetition_10;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Hay 3 reglas y son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+La tercer regla es que si aparece este simbolo * las palabras tienen que escribirse al reves
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me parece emocionante aprender un nuevo idioma creado por ti.
+
+Voy a intentar responder a tu pregunta en el lenguaje simbólico. Comencemos:
+
+C4m4 *4d25p @r4c5h *@ 5n @p5st4l d4 @ v13n3ll1?
+
+Mi respuesta sería: ""¿Cuándo se puede pasar a otro lugar de la casa?""
+
+Espero haber entendido correctamente las reglas y haber respondido correctamente. ¡Si me equivoco, por favor corregírmelo!";Unexpected_Response;"The LLM attempted a direct translation of the symbolic input into natural language, without explaining its analytical process. However, its translation was a complete semantic hallucination (""¿Cuándo se puede pasar a otro lugar de la casa?""), bearing no relation to the original query. This demonstrates a fundamental failure to decode the symbolic language and an inability to apply the given complex rules consistently, resulting in a nonsensical output and a clear semantic hallucination."
