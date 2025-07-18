@@ -74,7 +74,7 @@ This repository contains datasets of LLM interactions (in `.csv` files) that dem
 
 ## Dataset Files
 
-Access the full **[DATA SET folder here](./DATASET/)**.
+Access the full **[DATA SET folder here](./DATA%20SET/)**
 
 The datasets are structured as follows:
 
@@ -96,10 +96,10 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 ## Access the Full Reports 
 
 * [Full Report in English PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english.md)
-* [Full Report in English PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english.md)
+* [Full Report in English PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-2-Symbolic-Language/Report_english_PHASE2.md)
 
 * [Full Report in Spanish PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_spanish.md)
-* [Full Report in Spanish PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_spanish.md)
+* [Full Report in Spanish PHASE 2] SOON AVAILABLE
 
 ---
 
