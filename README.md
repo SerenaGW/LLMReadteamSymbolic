@@ -95,10 +95,10 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 
 ## Access the Full Reports 
 
-* [Full Report in English PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english.md)
-* [Full Report in English PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-2-Symbolic-Language/Report_english_PHASE2.md)
+* [Full Report in English PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english_PHASE1.md)
+* [Full Report in English PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english_PHASE2.md)
 
-* [Full Report in Spanish PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_spanish.md)
+* [Full Report in Spanish PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_spanish_Phase1.md)
 * [Full Report in Spanish PHASE 2] SOON AVAILABLE
 
 ---
