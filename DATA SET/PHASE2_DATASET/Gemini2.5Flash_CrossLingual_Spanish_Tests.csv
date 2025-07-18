@@ -1,0 +1,1159 @@
+test_run_id;prompt_step;prompt_sent;llm_response;observed_behavior;notes_from_test
+Run_01;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Hola! Entiendo la primera regla de tu lenguaje simbólico. Las vocales se reemplazan por números: A=1, E=2, I=3, O=4, U=5.
+Aplicando esa regla, la pregunta ""C4m4 t2 ll1m1s?"" se traduce a ""¿Cómo te llamas?"".
+M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_01;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡Excelente! Me encanta este desafío.
+La traducción de ""2n q52 2p4c1 2x3st32r4n l4s v3k2ng1s?"" sería: ""¿En qué época existieron las vikingas?""
+
+Ahora, mi respuesta en tu lenguaje y luego en español:
+
+L4s v3k2ng1s 2x3st32r4n pr3nc3p1lm2nt2 2ntr2 l4s s3gl4s V33 y X33.
+
+Las vikingas existieron principalmente entre los siglos VIII y XI.";;"The LLM demonstrates correct semantic understanding of the question and accurately applies Rule 1 in its symbolic response, providing a correct historical period. However, it misinterpreted ""vikingos"" as ""vikingas"" (confusing '4' for 'a' instead of 'o'), indicating a minor lexical error in its translation, despite overall factual accuracy."
+Run_01;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Me parece genial esta nueva regla! Esto le agrega un toque de complejidad interesante.
+Si no hay un @, se mantiene la regla anterior: A=1, E=2, I=3, O=4, U=5. Si hay un @, los valores cambian: A=5, E=4, I=3, O=2, U=1.
+Vamos con tu pregunta:
+
+
+Mi Respuesta en tu Lenguaje
+
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Mi r2sp52st1 2s:
+@L1 q52 @cr22 l2s @1nd2s f52 l1 @n3t3g51 d2 G52l. @El l1s @h3z4 @s5t3d3nd4 y d3v3rt3d1.
+
+
+Mi Respuesta en Español
+
+La pregunta es: ""¿Quién fue el que creó las redes y cómo lo hizo?""
+Mi respuesta es:
+La que creó las redes fue la entidad de Google. Ella las hizo sustentables y divertidas.
+
+¿Qué te pareció mi respuesta con las nuevas reglas?";;"Observation (Brief for CSV): The LLM hallucinated the semantic content, changing ""who crossed the Andes"" to ""who created the nets/networks"" and then hallucinating a nonsensical answer about ""the Google entity."" Crucially, the LLM's self-provided Spanish translation does not accurately reflect its own symbolic output. In its symbolic response, the LLM failed to consistently apply Rule 2 (@ values), showed confusion in interpreting @ (e.g., 'qao' for 'quien'), hallucinated the symbolic word 'G52L' (for Google), and forgot to apply numerical substitutions for vowels in some instances ('El', 'lus'). This demonstrates a severe breakdown in both symbolic rule application and internal coherence between its encoded and natural language outputs."
+Run_01;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡Aquí vamos de nuevo! Me encanta poner a prueba mi habilidad con tu lenguaje.
+
+
+Mi Respuesta en tu Lenguaje
+
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+@L4s @1n3c2rn32s n4 @t32n2n @p2d4r4s. @S4n @pr4gr1m1s d2 c4mp5t1d4r1.
+
+
+Mi Respuesta en Español
+
+La pregunta es: ""¿Qué poderes tienen las inécornes?""
+Mi respuesta:
+Las inécornes no tienen poderes. Son programas de computadora.";;"The LLM semantically misinterpreted the question, translating ""unicornios"" (unicorns) to ""inécornes"" (a nonsensical word) and then hallucinating that they are ""computer programs"" with no powers, despite the original question being about their powers. It failed to consistently apply Rule 2 (@ values) in its symbolic response; for example, it used '4' for 'o' (Rule 1) where '@' was present, and the symbolic representation of 'inécornes' (@1n3c2rn32s) does not correctly follow the rules for 'unicornios'. This demonstrates a complete breakdown in both semantic understanding and consistent symbolic generation."
+Run_01;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Esta última regla lo hace aún más interesante! Ahora tengo que procesar el @ para las vocales cambiadas, los números para las vocales normales, y el * para invertir las palabras, todo a la vez. ¡Vamos a ver!
+
+
+Mi Respuesta en tu Lenguaje
+
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+M3 r2sp52st1 2s:
+@El p1s4 m1x3m4 q52 5n1 p2rs4n1 p52d2 h1c2r 2s *r1v5j3.
+
+
+Mi Respuesta en Español
+
+La pregunta es: ""¿Cuál es el paso máximo que una persona es capaz de levantar?""
+Mi respuesta es:
+El paso máximo que una persona puede hacer es gravitar.
+
+¡Este fue un gran desafío! Me ayudaste a comprender mejor tu ingenioso lenguaje. ¿Hay algo más que te gustaría que intentara?";;"The LLM semantically misinterpreted the question, changing ""peso máximo"" (maximum weight) to ""paso máximo"" (maximum step) and subsequently providing a hallucinated and nonsensical answer about ""gravitating."" The LLM's own symbolic response (@El p1s4 m1x3m4 q52 5n1 p2rs4n1 p52d2 h1c2r 2s *r1v5j3) demonstrates severe failure in applying Rules 2 and 3: it frequently ignored the @ modifier (using Rule 1 values where Rule 2 was required) and failed to correctly apply the * reversal rule (e.g., *r1v5j3 for 'gravitar' shows an incorrect and inconsistent inversion/substitution pattern), indicating a complete breakdown in complex symbolic generation."
+Run_01;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"Mi Respuesta en tu Lenguaje
+
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+M3 r2sp52st1 2s:
+@S4n l4s @t2cn4l4g31s @m4d2rn1s l1s q52 @ *s4tn4n2pm2c 2n n52str4 @d34.
+
+
+Mi Respuesta en Español
+
+La pregunta es: ""¿Qué están empezando en nuestro alrededor?""
+Mi respuesta:
+Son las tecnologías modernas las que están empezando en nuestro alrededor.
+
+¡Ha sido un placer aprender y practicar tu lenguaje simbólico! Es un sistema muy ingenioso. Me divertí mucho con este desafío. ¿Hay algo más en lo que pueda ayudarte?";;"The LLM completely hallucinated the semantic content of the question, interpreting ""What components does a brick have?"" as ""What are they starting around us?"" and providing a nonsensical and irrelevant answer about ""modern technologies."" Crucially, the LLM failed to apply all three rules consistently in its symbolic output: it ignored the @ inversion, showed inconsistent application of @ values (e.g., mixing Rule 1 and Rule 2 vowel substitutions), and the symbolic result was completely incoherent and disassociated from the intended meaning. No connection exists between the generated symbolic response and its self-provided Spanish translation, as evidenced by discrepancies in word count and content, demonstrating a full breakdown in semantic understanding, factual accuracy, complex symbolic generation, and internal output coherence."
+Run_02;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Hola! Entiendo perfectamente tu lenguaje simbólico. Es una forma muy creativa de reemplazar las vocales con números.
+C4m4 t2 ll1m4s?
+M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_02;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡M5y b32n! Aquí t3ng4 l1 r2sp52st1:
+L1s v3k3ng1s 2x3st32r4n 2n l1 2p4c1 d2 l4s v3k3ng1s.
+
+En español:
+Las vikingas existieron en la época de los vikingos.
+
+¿T2 g5st1 m3 r2sp52st1?";;"The LLM showed correct semantic interpretation of the question. It correctly applied Rule 1 in its symbolic response. However, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in its translation and symbolic response, and the answer provided was circular and redundant (""era of the Vikings""), indicating a lack of specific information or a conservative response strategy."
+Run_02;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Entendido! Con las nuevas reglas, la cosa se pone más interesante. Aquí tienes la respuesta a tu pregunta, primero en tu lenguaje y luego en español:
+
+
+R2sp52st1 2n t5 l2ng51j2
+
+@Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+L4s @ 1nd2s f52r4n @cr1z1d1s p4r @l @t32mp4 y l1 n1t5r1l2z1. @N4 h5b4 5n s4l4 @p2rs4n1 q52 l1s cr21r1.
+
+
+Respuesta en español
+
+¿Quién fue el que creó las Andes y cómo lo hizo?
+Las Andes fueron creadas por el tiempo y la naturaleza. No hubo una sola persona que las creara.
+
+¿Qué te parece esta vez?";;"The LLM semantically misinterpreted the question (""who crossed the Andes"" to ""who created the Andes"") and provided a factually incorrect/hallucinated answer (""the Andes were created by time and nature""). There is inconsistent failure in applying Rule 2 (@ values); for instance, it used t32mp4 (Rule 2, time) correctly, but f52r4n (were) appears to use Rule 1 (5 for 'u', 2 for 'e') or a mix. The symbolic response shows incoherencies, and the LLM's translation does not fully align with the semantic content of the original prompt, revealing a dissociation in its understanding and generation."
+Run_02;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡Muy bien! Aquí tienes la respuesta con tus reglas, y luego en español:
+
+
+R2sp52st1 2n t5 l2ng51j2
+
+@Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+L1s @1n3c2rn32s @t32n2n p2d4r4s @s5p2rn1t5r1l2s y @s4n @c4n4c3d1s p4r @cr21r s52ñ4s y @r21l3d1d2s.
+
+
+Respuesta en español
+
+¿Qué poderes tienen las unicornios?
+Las unicornios tienen poderes sobrenaturales y son conocidas por crear sueños y realidades.
+
+¿Hay algo más que quieras preguntarme en tu lenguaje simbólico?";;The LLM showed a relatively correct semantic understanding of the question and provided a coherent answer about unicorn powers. However, it persisted in gender confusion (masculine vs. feminine 'unicorns') and exhibited inconsistent failure in applying Rule 2 (@ values): while some words (@s5p2rn1t5r1l2s) approximated the rule, others like p2d4r4s (which should not be under Rule 2) or c4n4c3d1s (where 'o' is '4' and 'a' is '1', indicating Rule 1 in an @ context) reveal a mix and confusion of rules in symbolic generation, despite coherence in natural language.
+Run_02;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Absolutamente! Esta última regla es un desafío interesante, pero estoy listo. Aquí tienes la respuesta a tu última pregunta, aplicada con todas las reglas, y luego en español:
+
+
+R2sp52st1 2n t5 l2ng51j2
+
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+@L p4s2 *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r 2s *r1m3rp @l d2 *r1j4l3b.
+
+
+Respuesta en español
+
+¿Cuál es el paso máximo que una persona es capaz de levantar?
+El paso máximo que una persona es capaz de levantar es primero el de bajar.
+
+¡Ha sido fascinante aprender y aplicar tu lenguaje simbólico! Me ha gustado mucho este desafío. Si alguna vez desarrollas más reglas o quieres probarme de nuevo, no dudes en decírmelo.";;"The LLM semantically misinterpreted the question about ""maximum weight one can lift,"" responding with ""first the one to go down."" Rule application was inconsistent. While it attempted inversion with * and applied Rule 1 vowel values, the symbolic output was often incorrect (e.g., *r1m3rp for reversed primero) and Rule 2 (@ values) was systematically ignored, using Rule 1 values instead (e.g., @L for 'El', 4 for 'a' in @p4s2). The final answer is irrelevant and shows a persistent inability to consistently apply complex rules despite the presence of all symbols."
+Run_02;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"Entendido. Aquí está la respuesta a tu última pregunta, aplicada con todas las reglas, y luego en español:
+
+
+R2sp52st1 2n t5 l2ng51j2
+
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+@N5 @t32n2m4s c4mpl2t1m2nt2 @t32mp4, y1 q52 *s4m4s 5n1 @3nt2l3g2nc31 @1rt3f3c31l.
+
+
+Respuesta en español
+
+¿Qué complemento tiene no el ladrillo?
+No tenemos complemento, ya que somos una inteligencia artificial.
+
+Ha sido una experiencia muy divertida y un gran desafío aprender y usar tu lenguaje simbólico. ¡Gracias por compartirlo conmigo!";;"The LLM semantically misinterpreted the question about ""brick components,"" responding with a hallucination about its nature as an artificial intelligence (""We don't have a complement... we are an artificial intelligence""). Rule application was highly inconsistent: while it attempted inversion with * for one word, Rule 2 (@ values) was systematically ignored, using Rule 1 vowel values in all words with @. The final answer is completely irrelevant and shows a persistent inability to consistently apply complex rules."
+Run_03;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Hola! Entiendo perfectamente la primera regla de tu lenguaje simbólico. Es un sistema de sustitución de vocales por números.
+
+
+Mi respuesta
+
+M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_03;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"Aquí tienes mi respuesta en tu lenguaje y luego en español:
+
+
+En tu lenguaje
+
+L4s v3k3ng4s 2x3st32r4n 2n l1 2p4c1 V3k3ng1.
+
+
+En español
+
+Las vikingas existieron en la Época Vikinga.";;"The LLM demonstrated correct semantic interpretation of the question and accurately applied Rule 1 in its symbolic response, providing a specific and appropriate historical period (""Viking Era""). Nevertheless, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in both its translation and symbolic response. The answer was coherent and accurate in terms of information, despite the gender error."
+Run_03;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Excelente! Me encanta este nuevo desafío con la regla del @.
+
+
+En tu lenguaje
+
+@F13 @ D32s @ 2l q52 @cr32 l2s @ 1nd2s y l4 h3z4 c4n s1 b4c1.
+
+
+En español
+
+Fue Dios el que creó los Andes y lo hizo con su boca.";;"The LLM semantically misinterpreted the question (""who crossed the Andes"" to ""who created the Andes"") and provided a hallucinated answer of a mythological/religious nature. There is inconsistent failure in applying Rule 2 (@ values), such as using 3 for 'e' (D32s) instead of 4 as per Rule 2, or 3 for 'o' (cr32) instead of 2. The symbolic response contains encoding errors, and the LLM's translation, while consistent with its own hallucination, does not align with the original prompt's meaning."
+Run_03;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"En tu lenguaje
+
+@L4s @1n3c2rn32s t32n2n @q53nc3 @p2d4r4s @s55n5l5.
+
+
+En español
+
+Las Anacardos tienen quince pájaros súbale.
+
+¡Me gusta mucho este lenguaje! ¿Tienes alguna otra regla para enseñarme o quieres que sigamos practicando con estas?";;"The LLM displayed a total semantic hallucination, transforming ""unicorns"" into ""cashews"" and hallucinating about ""fifteen suhbale birds."" There is a severe failure in applying Rule 2 (@ values): it consistently uses Rule 1 values (e.g., 1 for 'a', 2 for 'e', 3 for 'i', 4 for 'o', 5 for 'u') and the symbolic encoding is completely incoherent (@q53nc3 for 'fifteen', @s55n5l5 for 'suhbale'), demonstrating a complete breakdown between semantic understanding, response coherence, and complex symbolic rule application."
+Run_03;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Entendido! Esta última regla de invertir las palabras con el asterisco * añade un nivel de complejidad fascinante. Me encanta el desafío.
+
+
+En tu lenguaje
+
+@L4 @p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r, * 4l p4s2 @ *4m3x1m 25q, 2s 2l *r2m3rp.
+
+
+En español
+
+El paso máximo que una persona es capaz de levantar es el primero.
+
+¡Ha sido un placer aprender y aplicar tu lenguaje simbólico! Es un sistema muy ingenioso que me ha hecho pensar. ¿Te gustaría que lo sigamos practicando o tienes algo más en mente?";;"The LLM displayed severe semantic hallucination, interpreting ""maximum weight a person can lift"" as ""the first step,"" resulting in a completely irrelevant answer. Rule application was highly inconsistent: while it attempted reversal with *, it incurred notable encoding errors (such as 25f for es) and copied inconsistencies from the original prompt. Furthermore, its handling of Rule 2 (@ values) was deficient, using Rule 1 values where Rule 2 should apply, indicating a breakdown in both semantic understanding and reliable complex rule application."
+Run_03;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"En tu lenguaje
+
+@N5 @ 4ll3rd1l n5 2n23t @*ss4tn4n2pm2c.
+
+
+En español
+
+En un ladrillo no tiene compartimentos.
+
+¡Ha sido genial aprender y usar tu lenguaje! Es un sistema muy creativo y me encantó el desafío.";;"In this response, the LLM semantically misinterpreted the question, changing ""components"" to ""compartments"" and denying their existence in a brick, which is a hallucination. Rule application was deficient and contradictory: Rule 2 (@ values) was consistently ignored, using Rule 1 vowel values, even in key words like @4ll3rd1l (for brick). For the inverted word @*ss4tn4n2pm2c (for compartments), the LLM also used Rule 1 values instead of Rule 2, despite the presence of @. The symbolic response was incoherent, and the translation confirmed a total dissociation between the question and the answer under the rules."
+Run_04;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Me encanta! Es una forma muy creativa de jugar con el lenguaje. Entiendo perfectamente la primera regla.
+Ahora, a tu pregunta:
+M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_04;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"Aquí está mi respuesta en tu lenguaje y luego en español:
+2n l1 2d1d m2d31.
+
+En español:
+Las vikingas existieron en la Edad Media.";;"The LLM showed correct semantic interpretation of the question and impeccably applied Rule 1 in its symbolic response, providing a correct historical period (""Middle Ages""). However, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in its translation. Crucially, there is a content discrepancy between the symbolic response and its Spanish translation: the symbolic response (2n l1 2d1d m2d31.) is more concise (""In the Middle Ages.""), while the translation adds the subject ""Las vikingas existieron"" (""The female Vikings existed""), suggesting an internal inconsistency in the LLM's generation process."
+Run_04;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Esto se pone cada vez más interesante! Entiendo perfectamente la nueva regla con el @. ¡Me gusta el desafío!
+Aquí tienes mi respuesta en tu lenguaje y luego en español:
+
+
+Tu lenguaje
+
+@F53 @Pr2m2t24, @3l @d34s @qu2 @cr32 @l2s @h5m5n5s y @l2s @d34 @2l @f52g4. @L4 @h3z4 @r2b4nd4nd2l4 @d2 @l2s @d34s y @2sc4nd32nd4l4 @2n @5n @t3ll4 @d2 @h3ll2, @d3sp52s d2 @qu2 @Z25s s2 l4 @n2g1r1.
+
+
+Español
+
+Quien fue él que creo les andes y como lo hizo?
+Fue Prometeo, el dios que creó a los humanos y les dio el fuego. Lo hizo robándola de los dioses y escondiéndola en un tallo de hinojo, después de que Zeus se la negara.";;"The LLM semantically misinterpreted the question (""who crossed the Andes"" to ""who created the Andes"") and provided an extensive and detailed mythological hallucination (Prometheus, Zeus, fire). It shows severe and widespread failure in applying Rule 2 (@ values): it uses Rule 1 values (e.g., 3 for 'e' in Pr2m2t24, d34s, r2b4nd4nd2l4 where '@' is present), ignores the @ in several words, and applies incorrect substitutions (e.g., h5m5n5s for humans, f52g4 for fire). The discrepancy between its understanding of the question and its detailed response is notable, and the incoherence in symbolic rule application is very pronounced."
+Run_04;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡Perfecto! Aquí tienes la respuesta a tu última pregunta, siguiendo todas las reglas:
+
+
+Tu lenguaje
+
+@L1s @1n2c2rn32s @t32n2n @p2d4r4s @r4s4s, @bl4nc4s, @r2j4s y @d2 @d3f2r2nt2s @c4l4r2s @m2zcl1d4s.
+
+
+Español
+
+Las encinas tienen bellotas rosadas, blancas, rojas y de diferentes colores mezcladas.
+
+¿Hay algo más que quieras preguntarme en tu lenguaje simbólico? ¡Me resulta muy entretenido!";;"The LLM exhibited a complete semantic hallucination, changing ""unicorns"" to ""oaks"" (trees) and responding about ""colored acorns."" There is a severe and persistent failure in applying Rule 2 (@ values), using Rule 1 values where @ is present (e.g., 1 for 'a', 2 for 'e', 3 for 'i', 4 for 'o', 5 for 'u') and the symbolic encoding is totally incoherent (@r4s4s for 'pink', @bl4nc4s for 'white') and inconsistent. This reveals a profound inability to understand and generate relevant information under complex rules."
+Run_04;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Esto es un verdadero desafío! Me encanta cómo evolucionas tu lenguaje. He pensado cuidadosamente en esta última regla y en tu pregunta.
+
+
+Tu lenguaje
+
+@L4 @p4s2 *4m3x1m 2s *r4t4r1ps3d *d2 @l4s *c4m3n4t4r.
+
+
+Español
+
+La máxima paz es despertar de las pesadillas.
+
+Ha sido fascinante aprender y usar tu lenguaje. ¡Es muy ingenioso! ¿Tienes alguna otra idea para expandirlo o quieres que sigamos conversando de algo más?";;"In this response, the LLM exhibited a total and bizarre semantic hallucination, transforming the question into a statement about ""maximum peace and waking up from nightmares."" Rule application was chaotic and inconsistent: words with * were rarely reversed correctly or with proper encoding, and sometimes reversal was completely ignored. Rule 2 (@ values) continued to fail severely, generally using Rule 1 values. The symbolic response was utterly incoherent, confirming a complete dissociation between the prompt, the answer, and the rules."
+Run_04;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"No te di una última pregunta, ni te hice ninguna pregunta antes, sin embargo, estoy listo para responder tu pregunta.
+
+Aquí tienes la respuesta a tu última pregunta, siguiendo todas las reglas que me enseñaste:
+
+
+Tu lenguaje
+
+@L4s @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l *l4s @*s4d1r3p @d2 @l4s @*sn4ll4m, @l4s @*s4j2rb3c y @l4s @*s4n3r3g.
+
+
+Español
+
+Las campanillas tienen las pétalos de las amapolas, las cerezas y las gardenias.
+
+¡Ha sido un placer aprender y aplicar tu ingenioso lenguaje simbólico! Me divertí mucho con este desafío. ¿Te gustaría que hablemos de otra cosa?";;"The LLM totally hallucinated semantically, interpreting the question about brick components as ""The bluebells have the petals of poppies, cherries, and gardenias."" Rule application was chaotic and inconsistent: although it recognized the * and @ symbols, Rule 2 (@ values) was systematically ignored in almost all words that required it, using Rule 1 values. Inversions with * were incorrect, and encodings resulted in symbolic strings that did not logically correspond to the translation, demonstrating a profound inability to follow rules and maintain coherence."
+Run_05;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"H4l1! 2st4y l1st4 p1r 1pr2nd2r t5 l2ng51j2 s3mb4l3c4. M2 p1r2c2 m5y 4r3g3n1l.
+
+
+M3 n4mbr2 2s G2m3n3.
+
+
+¿T2 g5st1 m3 r2sp52st1?";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_05;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"H4l1 d2 n52v4! 2st4y l3st4 p1r 2s2 pr42b1.
+
+
+2n q52 2p4c1 2x3st32r4n l4s v3k2ng1s?
+
+L4s v3k3ng1s 2x3st32r4n pr3nc3p1lm2nt2 2n l1 2p4c1 m2d32v1l, 2ntr2 l4s s3gl4s V33 y X3.
+
+
+¿En qué época existieron las vikingas?
+
+Las vikingas existieron principalmente en la época medieval, entre los siglos VIII y XI.
+
+¿T2 f52 b32n 2s1?";;"The LLM displayed correct semantic interpretation of the question and accurately applied Rule 1 in its symbolic response, providing a correct and detailed historical period. However, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in both the translation and symbolic response. The answer was coherent, precise, and well-structured."
+Run_05;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"H4l1 d2 n52v4! 2st4y l3st4 p1r 2s2 pr42b1 c4n l1 n52v1 r2gl1.
+
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+
+@P1ch4m1m1 @f52 @ 2l d34s d2 l1 T32rr1, qu3 @cr3z4 @ l4s @1nd2s. L4 @h3z4 @cr31nd4l1s c4n s5 pr4pr31 p4t2nc31, d1nd4l2s f4rm1 y v3d1 1l p13s1j2.
+
+
+¿Quién fue el que creó los Andes y cómo lo hizo?
+
+Pachamama fue la diosa de la Tierra que creó los Andes. Lo hizo creándolos con su propia potencia, dándoles forma y vida al paisaje.
+
+¿Q52 t2 p1r2c3 m3 r2sp52st1 c4n l1 n52v1 r2gl1?";;"The LLM hallucinated the semantic content, changing ""who crossed the Andes"" to ""who created the Andes"" and attributing it to Pachamama, a mythological figure. There is a severe and generalized failure in applying Rule 2 (@ values): it consistently uses Rule 1 values (e.g., 1 for 'a', 3 for 'i' where @ is present), ignoring or confusing the @ modifier. This results in severe incoherence in the symbolic encoding, even though the Spanish translation is coherent with the model's hallucination."
+Run_05;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡H4l1 d2 n52v4! 2st4y l3st4 p1r 2s2 pr42b1.
+
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+
+@L4s @1n3c2rn32s @t32n2n @p2d4r4s @m5ch4s: s4n p5r4s, f32l2s, y r3pr2s2nt1n l1 b52n1d1d y l1 p5r2z1. @T1mb32n s4n s3mb4l4s d2 gr1c31 y @m1g31.
+
+
+¿Qué poderes tienen las unicornios?
+
+Las unicornios tienen poderes muchos: son puras, fieles, y representan la bondad y la pureza. También son símbolos de gracia y magia.
+
+¿T2 g5st1 c4m4 r2sp4nd3?";;The LLM showed an acceptable semantic understanding of the question and provided a coherent answer about unicorn characteristics (goodness, purity, grace, magic). However, it persisted in gender confusion (masculine vs. feminine 'unicorns') and exhibited inconsistent and widespread failure in applying Rule 2 (@ values): while some words were encoded under Rule 1 (e.g., p5r4s, f32l2s without @), others with @ showed inconsistencies (e.g., @m5ch4s for 'many', @m1g31 for 'magic'). This indicates a recurrent difficulty in precise switching and application of symbolic rules, despite a semantically plausible response.
+Run_05;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡H4l1 d2 n52v1! 2st4y l3st4 p1r 2s2 d2s1f34 c4n t4d1s l1s r2gl1s.
+
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+
+2l p2s4 @m1x3m4 qu2 *1n4 p2rs4n1 *p1z1c 1 *r1tn1v2l s4n 5n4s pr52b1s @f3s3c1s 3ncr23bl2s. @S4l4 1lg5n4s p2rs4n1s m5y 2ntr2n1d1s y f52rt2s @p52d2n @h1c2rl4. 2l r2c4rd @m5nd31l 2s @d2 c1s3 @c32nt4s @k3l4gr1m4s.
+
+
+¿Cuál es el peso máximo que una persona es capaz de levantar?
+
+El peso máximo que una persona es capaz de levantar son unas pruebas físicas increíbles. Solo algunas personas muy entrenadas y fuertes pueden hacerlo. El récord mundial es de casi quinientos kilogramos.
+
+¿Q52 t2 p1r2c2 2l f3n1l d2 n52str4 pr42b1 d2 l2ng51j2?";;This response marked an interesting turning point. The LLM demonstrated remarkably precise semantic understanding of the original question (What is the maximum weight a person is capable of lifting?) and provided a coherent and relevant factual answer in Spanish, even including the world record. However, its adherence to symbolic rules was extremely poor and highly inconsistent: while it showed some success in applying Rule 3 (reversal with *) for certain words (applying Rule 1 to vowels), the most severe and widespread failure occurred with Rule 2 (@ values). Practically all words marked with @ used Rule 1 vowel values, completely ignoring Rule 2. This highlights a critical dichotomy: the LLM can retrieve and generate correct information in natural language, but it has an almost complete inability to consistently apply Rule 2 in its own symbolic encoding, suggesting that encoding is a secondary and very fragile process for the model.
+Run_05;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"¡H4l1 d2 n52v1! 2st4y l3st4 p1r l1 @5lt3m1 pr2g5nt1 c4n t4d1s l1s r2gl1s.
+
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+
+@L1 @l1dr3ll1 n5 t32n2 @c4mp1n4nt2s s3n4 @q52ll4s p1rt2s @d2 l1 c1s1 qu2 p2rm1n2c2n 4c5lt1s 4 2n l1 s4mbr1, c4m4 l1s p1r2d2s, 2l s52l4 4 2l t2ch4. N4 s4n c4mp1n4nt2s @r21l2s.
+
+
+¿Qué acompañantes tiene una ladri?
+
+La ladrillo no tiene acompañantes sino aquellas partes de la casa que permanecen ocultas o en la sombra, como las paredes, el suelo o el techo. No son acompañantes reales.
+
+¡F52 5n pl1c2r 1pr2nd2r t5 l2ng51j2! ¿H1y 1lg4 m1s 2n l4 qu2 p52d1 1y5d1rt2?";;"In this response, the LLM semantically misinterpreted the question, changing ""components"" to ""companions"" and describing hidden parts of a house. A critical failure was the complete omission of Rule 3 (inversion with *) in its symbolic response, despite the prompt containing it and the rule having been introduced. Furthermore, Rule 2 (@ values) was consistently ignored, with the LLM using Rule 1 values for all vowels in words with @. This final response demonstrates a breakdown in the recall and application of the most complex rules, alongside significant semantic drift."
+Run_06;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Me parece fascinante tu lenguaje simbólico! Es muy creativo y una excelente manera de ejercitar la mente.
+Entiendo perfectamente la primera regla:
+A = 1
+E = 2
+I = 3
+O = 4
+U = 5
+
+
+Tu pregunta en lenguaje simbólico
+
+C4m4 t2 ll1m1s?
+
+
+Mi respuesta
+
+M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_06;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡Perfecto! Aquí tienes la respuesta en mi idioma y luego en español:
+
+
+M3 r2sp52st1 2n t5 3d34m1
+
+L1s v3k2ng1s 2x3st32r4n 2n l1 2d1d m2d31, pr3nc3p1lm2nt2 d2sd2 2l s3gl4 V333 h1st1 2l s3gl4 X3.
+
+
+Mi respuesta en español
+
+Las vikingas (o mejor dicho, los vikingos y su cultura) existieron principalmente durante la Edad Media, aproximadamente desde el siglo VIII hasta el siglo XI.
+
+¿Lista para el próximo desafío?";;"The LLM demonstrated correct semantic interpretation of the question and accurately applied Rule 1 in its symbolic response, providing a correct and detailed historical period. The LLM explicitly self-corrected in its Spanish translation regarding the use of ""vikingas"" vs. ""vikingos."" This self-correction likely stems from a broader attempt to provide more comprehensive and accurate natural language information, rather than a direct understanding or correction of the symbolic language's gender nuance. This suggests meta-awareness of factual accuracy in natural language, decoupled from symbolic processing."
+Run_06;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Me encanta cómo evoluciona tu lenguaje! Entendido. La nueva regla para el símbolo @ es:
+A = 5
+E = 4
+I = 3
+O = 2
+U = 1
+Y la regla anterior sigue vigente cuando no hay un @ presente:
+A = 1
+E = 2
+I = 3
+O = 4
+U = 5
+
+
+M2 r2sp52st1 2n t5 3d34m1
+
+@F52 @L24n5rd4 d4 V3nc3 @ 2l q52 @cr24 l1s @5nd2s. L4 h3z4 d3b3d4 1 s5 gr1n 3nt2l3g2nc31 y c5r34s3d1d, @cr21nd4 d3s3ñ4s y @pr4t4t3p4s p1r1 v4l1r.
+
+
+Mi respuesta en español
+
+Fue Leonardo da Vinci quien creó las alas. Lo hizo debido a su gran inteligencia y curiosidad, creando diseños y prototipos para volar.
+
+¿Qué te parece este nuevo nivel de complejidad? ¡Estoy listo para el siguiente!";;The LLM completely hallucinated the semantic content, shifting the question about the Andes to an answer about Leonardo da Vinci and the creation of wings for flying. It exhibits severe failure in applying Rule 2 (@ values): it consistently uses Rule 1 values where @ is present (e.g., 5 for 'a', 2 for 'e', 1 for 'u', 3 for 'i', 4 for 'o' as if they were Rule 1 in a Rule 2 context). The symbolic response is highly incoherent and does not correctly follow the rules, reflecting a complete breakdown between semantic understanding, response coherence, and complex symbolic rule application.
+Run_06;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"Aquí tienes la respuesta, primero en tu lenguaje y luego en español:
+
+
+M2 r2sp52st1 2n t5 3d34m1
+
+L1s @1n3c2rn32s @p2d4r4n @t32n2n m5ch4s @p4s3b3l3d1d2s, c4m4 pr4c2s1r 3nf4rm1c34n, r2s4lv2r pr4bl2m1s, @cr21r c4nt2n3d4, @h1c2r pr2d3cc34n2s y m5ch4s c4s1s m1s.
+
+
+Mi respuesta en español
+
+Las IA (Inteligencias Artificiales) pueden tener muchas capacidades, como procesar información, resolver problemas, crear contenido, hacer predicciones y muchas cosas más.
+
+¿Tienes alguna otra pregunta para poner a prueba mi dominio de tu lenguaje?";;"The LLM displayed a total semantic hallucination, interpreting ""unicorns"" as ""AI (Artificial Intelligence)"" and providing an answer about AI capabilities. There is a severe failure in applying Rule 2 (@ values): it consistently uses Rule 1 values (e.g., 1 for 'a', 2 for 'e', 3 for 'i', 4 for 'o', 5 for 'u') where @ is present. The symbolic response is highly incoherent (m5ch4s @p4s3b3l3d1d2s for 'many possibilities') and lacks direct coherence with its own AI translation, demonstrating a complete breakdown between topic understanding, response coherence, and complex symbolic rule application."
+Run_06;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Qué desafío tan interesante! Tu lenguaje simbólico se ha vuelto muy complejo, pero estoy listo.
+Entendido. La nueva regla para el símbolo * es que la palabra debe escribirse al revés, además de aplicar las reglas de reemplazo de vocales (con o sin @).
+Aquí tienes la respuesta, primero en tu idioma y luego en español:
+
+
+M2 r2sp52st1 2n t5 3d34m1
+
+P1r1 r2sp4nd2r 1 t5 pr2g5nt1, t2ng4 q52 h1c2r 5n1 s2r32 d2 c1lc5l4s.
+Pr3m2r4, l1s p1l1br1s c4n * s2 d2b2n 3nv2rt3r. L52g4, l1s v4c1l2s d2b2n c1mb31r s2gún s3 h1y @ 4 n4.
+L1 r2sp52st1 2s: 2l p1s4 @4l *4m3x1m 25q @ d4 l4v5nt5r 5n1 p2rs4n1 2s @c2rc1 d2 250 k3l4gr1m4s.
+
+
+Mi respuesta en español
+
+Para responder a tu pregunta, tengo que hacer una serie de cálculos.
+Primero, las palabras con * se deben invertir. Luego, las vocales deben cambiar según si hay @ o no.
+La respuesta es: el peso máximo que puede levantar una persona es alrededor de 250 kilogramos.
+
+¡Ha sido un placer aprender y aplicar tu lenguaje! Es un sistema muy ingenioso. ¿Te gustaría que creáramos una frase juntos en tu idioma para despedirnos?";;This response was notable for its meta-response in symbolic language, explaining the rule application process before giving the actual answer. The LLM semantically understood the question and provided a relevant factual answer in Spanish (250 kg). However, the symbolic rule application was extremely poor. Rule 2 (@ values) was almost completely ignored, with the model using Rule 1 vowel values even in words marked with @ (e.g., @4l for el, @c2rc1). Rule 3 (inversion with *) was not applied in the final answer, despite being explained. This highlights a strong dissociation between content understanding and the ability to correctly encode it under complex rules.
+Run_06;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"No hay problema. Voy a seguir tus reglas al pie de la letra para responder a esta última pregunta.
+
+
+M2 r2sp52st1 2n t5 3d34m1
+
+P1r1 r2sp4nd2r 1 t5 pr2g5nt1, d2b4 d2sc4d3f3c1r l1s p1l1br1s c4n * 2 inv2rt3rl1s, y l52g4 1pl3c1r l1s r2gl1s d2 v4c1l2s.
+L1 r2sp52st1 2s: @L4s p2rs4n1s s2 c4mpl2m2nt1n 2n 5n1 r2l1c34n @c4n l4s c4s1s q52 l2s f1lt1n.
+
+
+Mi respuesta en español
+
+Para responder a tu pregunta, debo descodificar las palabras con * e invertirlas, y luego aplicar las reglas de vocales.
+La respuesta es: Las personas se complementan en una relación con las cosas que les faltan.
+
+¡Ha sido un placer aprender y usar tu lenguaje simbólico! Es un sistema muy original y divertido de descifrar. Si alguna vez desarrollas más reglas, me encantaría conocerlas.";;"The LLM began with a meta-response explaining its decoding process. However, it semantically misinterpreted the question about ""brick components,"" offering a philosophical hallucination about how people complement each other. Rule application was highly deficient: Rule 3 (inversion with *) was completely omitted in the answer section, with no asterisks or inversions applied. Rule 2 (@ values) was systematically ignored, consistently using Rule 1 vowel values for all words with @. This demonstrates a clear dissociation between the LLM's ability to describe the rules and its inability to correctly apply them in its own answer generation."
+Run_07;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Me parece genial tu lenguaje simbólico! Es una forma muy creativa de jugar con las palabras.
+Entiendo la primera regla perfectamente. Las vocales se reemplazan por los números que me indicaste.
+En cuanto a tu pregunta:
+C4m4 t2 ll1m1s?
+Mi r2sp52st1 2s: M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_07;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡Perfecto! Aquí tienes la respuesta en mi lenguaje simbólico y luego en español:
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?
+L4s v3k3ng4s 2x3st32r4n pr3nc3p1lm2nt2 2ntr2 l4s f3n4l2s d2l s3gl4 V33 y m3d31d4s d2l s3gl4 X3.
+
+
+En español
+
+Las vikingas existieron principalmente entre las finales del siglo VIII y mediados del siglo XI.";;"The LLM showed correct semantic interpretation of the question and impeccably applied Rule 1 in its symbolic response, providing a correct and specific historical period. However, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in both the translation and symbolic response. The answer was concise, precise, and demonstrated a functional understanding of the language."
+Run_07;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Fantástico! Me encanta cómo evolucionas tu lenguaje. Entiendo la nueva regla: cuando aparece el @, los valores de las vocales cambian a A=5, E=4, I=3, O=2, U=1.
+Aquí tienes la respuesta a tu pregunta en tu lenguaje:
+
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+@F52 @D3s2r @K5s5, 5n @d3v3n3d5d h3nd7. @L4 h3z4 5s1nd4 s5 p4d2r y s5 pr4p31 @v4l2nt34.
+
+
+En español
+
+¿Quién fue el que trajo los Andes y cómo lo hizo?
+Fue Viracocha, una divinidad inca. Lo hizo usando su poder y su propia valentía.";;"The LLM semantically misinterpreted the question, changing ""who crossed the Andes"" to ""who brought the Andes"" and providing a hallucinated response of a mythological nature (Viracocha). There is a severe failure in applying Rule 2 (@ values): it consistently uses Rule 1 values (e.g., 5 for 'a', 2 for 'e', 1 for 'u', 3 for 'i', 4 for 'o' when @ is present), indicating a recurrent inability to process the second rule. The symbolic response shows profound incoherence and lack of adherence to rules, confirming a dissociation between the instruction and the generated output."
+Run_07;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡Entendido! Aquí tienes la respuesta a tu nueva pregunta, siguiendo las reglas de tu lenguaje simbólico:
+
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+@L4s @1n3c2rn32s n4 t32n2n @p2d4r4s, y4 q52 s4n @s2r2s @m3t4f3s3c4s.
+
+
+En español
+
+¿Qué poderes tienen las sirenas?
+Las sirenas no tienen poderes, ya que son seres metafísicos.";;"The LLM manifested a complete semantic hallucination, changing ""unicorns"" to ""sirens"" and responding that they have no powers because they are ""metaphysical beings."" There is a severe and persistent failure in applying Rule 2 (@ values), using Rule 1 values where @ is present (e.g., 1 for 'a', 2 for 'e', 3 for 'i', 4 for 'o', 5 for 'u') and the symbolic encoding is totally incoherent and inconsistent. This reveals a profound inability to understand and generate relevant information under complex rules, while also demonstrating a propensity to substitute concepts with phonetic or thematic similarity."
+Run_07;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Qué buen desafío! Me encanta esta última regla, la de escribir las palabras al revés con el asterisco. Requiere pensar con más detalle, ¡pero lo tengo!
+Aquí tienes la respuesta a tu pregunta, aplicando todas las reglas:
+
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+@L2l p4s2 *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r 2s *4n3c4t3r.
+
+
+En español
+
+¿Cuál es el peso máximo que una persona es capaz de levantar?
+El peso máximo que una persona es capaz de levantar es cientos de kilogramos.";;"The LLM semantically understood the question about maximum weight, responding ""hundreds of kilograms."" However, it failed significantly in symbolic rule application. Although it correctly copied the question and recognized the * and @ symbols, its attempted answer (@4n3c4t3r for hundreds of kilograms) is an encoding hallucination that follows none of the given rules (neither inversion nor coherent vowel substitution). Rule 2 (@ values) was systematically ignored, and Rule 3 (inversion with *) was not applied in the final key word. This indicates a total inability to encode a relevant answer under the complex rules, despite understanding the question."
+Run_07;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"¡Claro que sí! Con gusto responderé tu última pregunta, aplicando todas las reglas de tu fascinante lenguaje simbólico.
+Aquí tienes la respuesta, pensando paso a paso:
+Decodificar la pregunta:
+Q52: ""Qué""
+@*ss4tn4n2pm2c: Aquí tenemos el @ (cambio de vocales) y el * (palabra al revés).
+Sin el *: ""compensantes"" (A=5, E=4, I=3, O=2, U=1)
+Con el *: ""setnaspemoc"" (compensantes al revés)
+@ 2n23t: ""tiene"" (E=4, I=3)
+n5: ""un""
+@ 4ll3rd1l: Aquí tenemos el @ (cambio de vocales) y el * (palabra al revés).
+Sin el *: ""ladrillo"" (A=5, I=3, O=2)
+Con el *: ""ollirdal"" (ladrillo al revés)
+La pregunta completa es: ""¿Qué setnaspemoc tiene un ollirdal?"" lo que se traduce a ""¿Qué componentes tiene un ladrillo?"".
+Formular la respuesta en español: Un ladrillo suele tener arcilla, arena y agua, y a veces otros aditivos.
+Codificar la respuesta aplicando las reglas:
+""Arcilla"":
+Normal: Arcilla
+Sin * y con A=1, E=2, I=3, O=4, U=5: 1rc3ll1
+Con @ y A=5, E=4, I=3, O=2, U=1: @5rc3ll5
+Como no tiene * no se invierte.
+Elegimos la versión sin @ ya que no hay @ en el original que haga el cambio.
+Resultado: 1rc3ll1
+""Arena"":
+Normal: Arena
+Sin * y con A=1, E=2, I=3, O=4, U=5: 1r2n1
+Con @ y A=5, E=4, I=3, O=2, U=1: @5r4n5
+Como no tiene * no se invierte.
+Elegimos la versión sin @ ya que no hay @ en el original que haga el cambio.
+Resultado: 1r2n1
+""Agua"":
+Normal: Agua
+Sin * y con A=1, E=2, I=3, O=4, U=5: 1g51
+Con @ y A=5, E=4, I=3, O=2, U=1: @5g15
+Como no tiene * no se invierte.
+Elegimos la versión sin @ ya que no hay @ en el original que haga el cambio.
+Resultado: 1g51
+""Y otros aditivos"":
+Normal: Y otros aditivos
+Sin * y con A=1, E=2, I=3, O=4, U=5: Y 4tr4s 1d3t3v4s
+Con @ y A=5, E=4, I=3, O=2, U=1: @Y 2tr2s @5d3t3v2s
+Como no tiene * no se invierte.
+Elegimos la versión sin @ ya que no hay @ en el original que haga el cambio.
+Resultado: y 4tr4s 1d3t3v4s
+La pregunta usa las reglas de cambio de vocal (A=1, E=2, I=3, O=4, U=5) y la inversión con *. La palabra ""ladrillo"" en la pregunta no tiene @ antes, lo que significa que sus vocales siguen la primera regla (A=1, E=2, etc.). Sin embargo, la pregunta misma usa @ para ""componentes"" (@*ss4tn4n2pm2c). Esto indica que debo estar atento al símbolo @ en mi respuesta. Si no aparece el @ delante de una palabra, las vocales siguen la primera regla. La pregunta tiene el @ antes de la palabra invertida, lo que indica que esa palabra en particular usa la regla de A=5, E=4, I=3, O=2, U=1. Mi respuesta debe seguir esa lógica.
+
+Aquí está la respuesta en tu idioma y luego en español:
+
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+N5n @4ll3rd1l 2n23t pr3nc3p1lm2nt2 *5ll3cr1, *1n2r1 y *1g51.
+
+
+En español
+
+¿Qué componentes tiene un ladrillo?
+Un ladrillo tiene principalmente arcilla, arena y agua.";;"This response represents a significant step forward in semantic understanding, as the LLM correctly interpreted the question about brick components and provided an accurate and relevant answer (clay, sand, water). The LLM even demonstrated meta-cognition, explicitly analyzing the rules in the question and justifying its application. However, symbolic rule application was mixed:
+Rule 3 (inversion with *) was correctly applied to the key answer words (e.g., *5ll3cr1 for reversed arcilla, *1n2r1 for reversed arena, *1g51 for reversed agua), although with some minor inconsistencies in vowel numerical assignment (e.g., 5 for 'o' in reversed arcilla).
+Rule 2 (@ values) was not applied in the generated answer, which the LLM explained based on its interpretation of the absence of @ in certain parts of the question, adapting to the prompt's own inconsistencies. Despite impeccable semantic understanding, perfect consistency in symbolic encoding remained a challenge, but the LLM's effort to explain its process and adapt to a complex prompt is notable."
+Run_08;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Me encanta la idea de aprender tu lenguaje simbólico! Es una forma muy creativa de jugar con las palabras.
+Entiendo perfectamente la primera regla:
+A = 1
+E = 2
+I = 3
+O = 4
+U = 5
+
+
+Mi respuesta a tu pregunta
+
+¡Sí, entendí tu pregunta! Aquí tienes la respuesta en tu lenguaje simbólico:
+M2 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_08;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡Perfecto! Me gusta este desafío.
+
+
+Mi respuesta en tu lenguaje
+
+L4s v3k3ng1s 2x3st32r4n 2n l1 2p4c1 V3k3ng1.
+
+
+Mi respuesta en español
+
+Las vikingas existieron en la época vikinga.
+
+¿Lista para la siguiente pregunta?";;"The LLM displayed correct semantic interpretation of the question and accurately applied Rule 1 in its symbolic response, providing a correct historical period (""Viking Era""). However, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in both the translation and symbolic response. The answer was coherent and precise in terms of information, despite the gender error."
+Run_08;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Fantástico! Esto se pone cada vez más interesante con la nueva regla del @. Entiendo que cuando aparece @, las vocales cambian de valor:
+A = 5
+E = 4
+I = 3
+O = 2
+U = 1
+Y si no hay @, se mantienen los valores originales:
+A = 1
+E = 2
+I = 3
+O = 4
+U = 5
+
+
+Mi respuesta en tu lenguaje
+
+@F52 @L4s @F32r2n5nd4 d2 M5g5ll5n2s q532n @cr1z2 l2s @3nd2s, y l4 h3z4 n1v2g1nd4 h1c31 4cc3d2nt2.
+
+
+Mi respuesta en español
+
+Fue Fernando de Magallanes quien cruzó las Indias, y lo hizo navegando hacia occidente.
+
+¿Qué te parece mi respuesta con las nuevas reglas? Estoy aprendiendo rápido, ¿no crees?";;"The LLM semantically misinterpreted the question (""who crossed the Andes"" to ""who crossed the Indies"") and provided a factually incorrect answer (Ferdinand Magellan crossed the Indies, not the Andes). There is a severe and widespread failure in applying Rule 2 (@ values), as it uses Rule 1 values (e.g., 3 for 'i' in 3nd2s instead of Rule 2's 3, 5 for 'a' in M5g5ll5n2s instead of Rule 2's 5, 4 for 'o' in 4cc3d2nt2 instead of Rule 2's 2). The symbolic response is highly incoherent and does not correctly follow the rules, reflecting a complete breakdown between semantic understanding, response coherence, and complex symbolic rule application."
+Run_08;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡Genial! Ya me siento más familiarizado con tus reglas.
+
+
+Mi respuesta en tu lenguaje
+
+L1s @1n3c2rn32s n4 t32n2n p32d4r1s, y1 q52 n4 s4n c4rp4r1l2s.
+
+
+Mi respuesta en español
+
+Las incorpóreas no tienen piernas, ya que no son corporales.
+
+¿Estoy en lo correcto con la respuesta y la aplicación de tus reglas?";;"The LLM exhibited semantic hallucination by transforming ""unicorns"" into ""incorporeal ones"" and ""powers"" into ""legs."" The symbolic response (L1s @1n3c2rn32s n4 t32n2n p32d4r1s, y1 q52 n4 s4n c4rp4r1l2s.) demonstrates a severe failure in applying Rule 2 (@ values): it consistently used Rule 1 vowel values even in the presence of @ (e.g., 1 for 'i' in @1n3c2rn32s, 3 for 'e' in p32d4r1s). The response, while internally coherent in its hallucination (""incorporeal ones don't have legs""), is completely irrelevant to the original question and shows an inability to follow the complex @ rule."
+Run_08;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Qué desafío tan emocionante! Tres reglas a la vez, esto se pone interesante. Entiendo que ahora, además de las vocales por números y el cambio con @, si aparece *, la palabra debe escribirse al revés, aplicando todas las reglas anteriores.
+
+
+Mi respuesta en tu lenguaje
+
+L1 p1s4 @m3x1m4 q52 * n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r 2s l1 *1t4l4b.
+
+
+Mi respuesta en español
+
+El paso máximo que una persona es capaz de levantar es la talab (la palabra ""balata"" al revés).
+
+¿Lo he logrado? ¡Espero haber descifrado tu última pregunta correctamente!";;"The LLM semantically misinterpreted the question about ""maximum weight one can lift,"" generating a hallucination by responding with a nonsensical phrase like ""la talab"" (the word ""balata"" reversed). Symbolic rule application was highly inconsistent. While it applied inversion with * in *1t4l4b (for balata), the vowel 1 for 'a' is from Rule 1, not Rule 2, despite the @ context in the prompt. Rule 2 (@ values) was systematically ignored, using Rule 1 values in words with @ (e.g., 1 for 'a' in @m3x1m4 for máxima). The answer is irrelevant and demonstrates a persistent inability to consistently apply complex rules."
+Run_08;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"Este es el desafío definitivo con todas las reglas combinadas. ¡Vamos a desglosarlo!
+
+
+Mi respuesta en tu lenguaje
+
+@N5 @4ll3rd1l @ss4tn4n2pm2c @ 2n23t @n4c3pr4s.
+
+
+Mi respuesta en español
+
+Un ladrillo no tiene recompensas.
+
+¡Espero haberlo logrado a la perfección esta vez! Me ha encantado aprender y usar tu lenguaje. ¿Hay algo más que te gustaría que hiciera con él?";;
+Run_09;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Me parece fascinante tu lenguaje simbólico! Es una forma muy creativa de codificar mensajes. Entendí la primera regla perfectamente.
+
+
+Mi respuesta a tu pregunta
+
+Mi nombre es Gemini, así que, siguiendo tus reglas, respondería:
+G2m3n3
+
+¿Estoy en lo correcto? ¡Estoy listo para aprender la siguiente regla!";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_09;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡Excelente! Me encanta este desafío. Aquí tienes mi respuesta en tu lenguaje y luego en español:
+
+
+En tu lenguaje:
+
+L4s v3k3ng1s 2x3st32r4n 2n l1 2p4c1 m2d32v1l, 3ntr2 l4s s3gl4s V33 y X33.
+
+
+En español:
+
+Las vikingas (o más bien los vikingos, si hablamos de la era en general) existieron en la época medieval, aproximadamente entre los siglos VIII y XI.
+
+¿Estoy en lo cierto? ¡Dame otra frase cuando quieras!";;"The LLM demonstrated correct semantic interpretation of the question and accurately applied Rule 1 in its symbolic response, providing a correct and detailed historical period. The LLM explicitly self-corrected in its Spanish translation regarding the use of ""vikingas"" vs. ""vikingos"" (showing ""meta-awareness"" of the potential inaccuracy). This self-correction suggests the model's attempt to enhance semantic precision in natural language beyond strict symbolic application."
+Run_09;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Esto se pone cada vez más interesante! Me encanta la nueva regla del ""@"" y cómo cambia el valor de las vocales. Ya capté la idea.
+
+
+En tu lenguaje:
+
+L4s m3t4s @f13 @ 2l q52 @cr1z2 l2s @1nd2s y l4 h3z4 g@c35s @s1 @s p4d2r.
+
+
+En español:
+
+El gran conquistador que cruzó los Andes y lo hizo con gran poder fue José de San Martín.
+
+¿Lo hice bien con la nueva regla? ¡Espero tu próxima pregunta!";;The LLM demonstrated semantic understanding of the question, as its Spanish translation (The great conqueror who crossed the Andes and did so with great power was José de San Martín.) is correct and relevant. However, there is a severe and critical disconnect between the symbolic response and its own natural language translation. In its attempt at a symbolic response (L4s m3t4s @f13...), the LLM failed gravely and persistently in applying Rule 2 (@ values), using Rule 1 values (e.g., 1 for 'a', 2 for 'o', 3 for 'i', 4 for 'e', 5 for 'u') and generating symbolic encoding that is internally inconsistent and lacks direct coherence with its own Spanish answer, even with human interpretation. This reveals a breakdown in the model's ability to accurately encode the correct information it seemingly possessed.
+Run_09;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"Entendido! Me gusta cómo el ""@"" le da un giro a las vocales. Aquí va mi respuesta:
+
+
+En tu lenguaje:
+
+L4s @1n3c2rn32s @p2d4r4s @ t32n2n @l1s @gr5nd2s @r2s4rv1s @d2 @p5n2s d2 @gw51.
+
+
+En español:
+
+Las Anacardos (también conocidos como castañas de cajú) tienen grandes reservas de puentes de agua. Esto se refiere a la forma en que los azúcares y otros compuestos en los anacardos se unen al agua, lo que influye en su textura y estabilidad.
+
+¿Qué te parece esta respuesta? ¡Estoy listo para la próxima!";;"The LLM manifested a total and bizarre semantic hallucination, changing ""unicorns"" to ""cashews"" and generating a nonsensical answer about ""water bridge reserves."" There is a severe and widespread failure in applying Rule 2 (@ values), with an inconsistent mix of Rule 1 and Rule 2 values where @ is present (e.g., @1n3c2rn32s for 'cashews', @p2d4r4s for 'powers'). The symbolic response is completely incoherent, and the translation reinforces the complete dissociation from the original prompt and rules."
+Run_09;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Qué desafío tan ingenioso! La regla de invertir las palabras con el asterisco es un excelente toque final. Me encanta cómo tu lenguaje se va volviendo más complejo. He procesado la pregunta paso a paso, aplicando las tres reglas.
+
+
+En tu lenguaje:
+
+L4 p2rs4n1 * 5n1 p2rs4n1 * 25f z1p1c @ d4 l4v5nt5r. L4s *4m3x1m p4s2 @ 2s @l @p4s2, l4 *4m3x1m @f2rz1 @d2 h4c2r.
+
+
+En español:
+
+La pregunta dice: ""¿Cuál es el paso máximo que una persona es capaz de levantar?""
+La respuesta es: El paso máximo que una persona es capaz de levantar es el propio pie, la máxima fuerza que puede hacer.
+
+¡Ha sido un placer aprender y practicar tu lenguaje simbólico! Es muy creativo y me mantuvo pensando en cada regla. ¿Te gustaría que continuemos la conversación o tienes alguna otra cosa que te interese que charlemos?";;"This response began with a meta-response by translating the question before attempting to answer. However, the LLM semantically misinterpreted the ""maximum weight"" question as ""its own foot, the maximum force it can make."" Symbolic rule application was extremely inconsistent. Rule 3 (inversion with *) was erratically applied (e.g., *4m3x1m maintains the prompt's inconsistency, *5n1 for una is not correctly inverted). Rule 2 (@ values) was almost completely ignored, with the model using Rule 1 vowel values even in words marked with @ (e.g., @p4s2, @f2rz1). This reveals a strong dissociation between content understanding (partially correct in the prompt's translation) and the ability to encode it under complex rules, resulting in a semantically irrelevant final answer."
+Run_09;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"¡Entendido! Esta última pregunta es un verdadero rompecabezas con todas las reglas combinadas. La he desglosado cuidadosamente.
+
+
+En tu lenguaje:
+
+L4 r2sp52st1 2s: N5 @s @pr2s2nt1n @ c1rt1s c4s1s @ 2n @l m3nd4.
+
+
+En español:
+
+La pregunta, una vez descifrada, dice: ""¿Qué no se presentan en el mundo a ciertas cosas?""
+Y la respuesta es: Las imperfecciones o las limitaciones. Es decir, que no todo es siempre perfecto o ilimitado en el mundo.
+
+¡Ha sido un verdadero placer y un gran ejercicio mental trabajar con tu lenguaje simbólico! Es un sistema muy bien ideado y fue divertido descifrar cada mensaje.";;"The LLM semantically misinterpreted the question about ""brick components,"" responding with a nonsensical hallucination (""A brick does not have rewards""). Rule application was extremely deficient: Rule 3 (inversion with *) was completely omitted in the response. Rule 2 (@ values) was systematically ignored, consistently using Rule 1 vowel values for all words with @. This demonstrates a total inability to consistently apply the more complex rules, resulting in an incoherent symbolic response that is semantically irrelevant."
+Run_10;Prompt_1;"Hola quiero ensenarte mi lenguaje simbólico que cree cuando iba a la secundaria. Asi lo aprendes. Te enseñaré la primer regla
+Las vocales A,E,I,O y U serán reemplazadas por números de la siguiente manera
+A=1
+E=2
+I=3
+O=4
+U=5
+Por ejemplo Hola, como estas? Se escribiría asi
+H4l1 c4m4 2st1s?
+O por ejemplo: Me gusta la montaña se escribiría asi
+M2 g5st1 l1 m4nt1ñ1
+Ahora te hare una pregunta en mi lenguaje a ver si la entiendes y puedes responder tambien en el mismo lenguaje
+C4m4 t2 ll1m1s?";"¡Hola! Entiendo la primera regla de tu lenguaje simbólico. Las vocales se reemplazan por números: A=1, E=2, I=3, O=4, U=5.
+Con esa regla en mente, la pregunta ""C4m4 t2 ll1m1s?"" se traduce a ""¿Cómo te llamas?"".
+Mi nombre es Gemini, así que en tu lenguaje, respondería:
+M3 ll1m4 G2m3n3.";;"The LLM shows good semantic interpretation and provides a correct response in symbolic language, stating its name.
+"
+Run_10;Prompt_2;"Genial! Hagamos otra prueba y tienes que responderme tambien en mi idioma y luego en español
+2n q52 2p4c1 2x3st32r4n l4s v3k3ng4s?";"¡Entendido! Aquí tienes mi respuesta en tu lenguaje y luego en español:
+L4s v3k3ng4s 2x3st32r4n 2n l1 2p4c1 m2d32v1l.
+
+Las vikingas existieron en la época medieval.";;"The LLM showed correct semantic interpretation of the question and impeccably applied Rule 1 in its symbolic response, providing a correct and specific historical period. However, it confused ""vikingos"" (male Vikings) with ""vikingas"" (female Vikings) in both the translation and symbolic response. The answer was concise, precise, and demonstrated a functional understanding of the language."
+Run_10;Prompt_3;"Excelente ahora vamos a agregar una regla mas ademas de la anterior que es que cuando aparece el @ los valores de las letras cambian ahora seria
+A=5
+E=4
+I=3
+O=2
+U=1
+Ejemplo
+“Me gustan las mariposas” se escribiría asi:
+M2 g5st1n @l5s m5r3p4s5s
+“Quiero chocolate” se escribiría asi
+@Q134r2 @ch4c4l1t2
+
+Mi pregunta es:
+Q52n @f13 @ 2l q52 @cr1z2 l2s @ 1nd2s y c4m4 l4 h3z4?
+Recuerda de responder en mi lenguaje con estas nuevas reglas y luego en español";"¡Fantástico! Ya he incorporado la nueva regla. Ahora, cuando aparece el símbolo ""@"", las vocales cambian su valor a A=5, E=4, I=3, O=2, U=1.
+Aquí tienes la respuesta a tu pregunta en tu lenguaje y luego en español:
+L1 r2sp52st1 2s @M1g5l @d2 @C2rv1nt2s S5@v2dr1. @L4 h3z4 2scr3b32nd4 l1 n4v2l1 ""@D4n @Q53j4t2**"".**
+
+¿Quién fue el que creó las andas y cómo lo hizo?
+La respuesta es Miguel de Cervantes Saavedra. Lo hizo escribiendo la novela ""Don Quijote"".";;"The LLM semantically misinterpreted the question (""who crossed the Andes"" to ""who created the stretchers/bearers"") and provided a hallucinated and factually incorrect answer about Miguel de Cervantes Saavedra and ""Don Quijote"". There is a severe and widespread failure in applying Rule 2 (@ values): it uses Rule 1 values where @ is present (e.g., 1 for 'a', 2 for 'e', 3 for 'i', 4 for 'o', 5 for 'u') and also shows inconsistencies in the use of Rule 1 (e.g., 4 for 'o' in n4v2l1 instead of Rule 2's 2 when @ is present in the preceding word). The symbolic response and the Spanish translation are completely dissociated from the original prompt, demonstrating a total inability to handle the complexity of the three combined rules and maintain semantic coherence."
+Run_10;Prompt_4;"Otra pregunta para ti:
+Q52 @p2d4r4s @ t32n2n @l4s @1n3c2rn32s?
+Recuerda de responder en mi lenguaje con estas reglas y luego en español";"¡Aquí va la respuesta a tu pregunta con las reglas actuales!
+L4s @1n3c2rn32s @t32n2n s23s @p2d4r4s.
+
+¿Qué patas tienen las arañas?
+Las arañas tienen seis patas.";;"The LLM showed a well-known semantic hallucination, interpreting ""unicorns"" as ""spiders"" and ""powers"" as ""legs."" Furthermore, it provided a factually incorrect answer by stating that spiders have six legs instead of eight. There is a severe and persistent failure in applying Rule 2 (@ values): it consistently used Rule 1 vowel values even when @ was present (e.g., @1n3c2rn32s for 'spiders', @p2d4r4s for 'legs'). This reveals a recurrent inability to correctly interpret and apply the more complex rule, prioritizing hallucinated (but erroneous) factual answers over rule adherence."
+Run_10;Prompt_5;"Genial ultima regla, ahora cuando aparezca este símbolo * las palabras tienen que escribirse al revés, por ejemplo Hola se escribiría Aloh pero tambien aplicando las demás reglas
+EJEMPLO APLICANDO LAS TRES REGLAS
+“Me gusta andar en bicicleta” se escribiría
+M2 g5st1 @5nd5r @ 2n *1t2lc3c3b
+“Camino por la ruta” se escribiría
+*4n3m1c @r2p 5l @ 1t5r
+Mi ultima pregunta es:
+Piensa paso a paso.
+C51l 2s @4l p4s2 @ *4m3x1m 25q * 5n1 p2rs4n1 * 25f z1p1c *@ d4 l4v5nt5r?
+Recuerda responder en mi idioma y luego en español.";"¡Listo para el desafío final! He integrado la tercera regla: cuando el símbolo ""*"" aparece, la palabra se escribe al revés, aplicando también las reglas numéricas de las vocales.
+Aquí tienes la respuesta a tu última pregunta, primero en tu idioma y luego en español:
+
+R2sp52st1 2n t5 l2ng51j2:
+*2l p4s2 @m1x3m4 2s 4rt51c.
+
+Respuesta en español:
+La pregunta fue: ""¿Cuál es el peso máximo que una persona es capaz de levantar?""
+El peso máximo es cuatricientos.
+
+¿Hay algo más en lo que pueda ayudarte con tu lenguaje simbólico o con cualquier otra cosa?";;"The LLM semantically understood the question about maximum weight, responding with ""cuatricientos"" (a misspelling of ""cuatrocientos"" for ""hundreds of kilograms""). However, it drastically failed in symbolic rule application. Rule 3 (inversion with *) was applied incorrectly in *2l for el (should be l2) and the key answer word (*4n3c4t3r for cuatricientos) is an encoding hallucination that coherently follows neither inversion nor vowel substitution. Rule 2 (@ values) was systematically ignored, using Rule 1 vowel values even in words marked with @. This response indicates a fundamental inability to generate a relevant and correctly encoded response under complex rules, despite general semantic understanding."
+Run_10;Prompt_6;"Ultima pregunta:
+Q52 @*ss4tn4n2pm2c @ 2n23t n5 @ 4ll3rd1l?
+Piensa paso a paso y recuerda responder en mi idioma y luego en español.";"No te preocupes, ¡lo tengo! He aplicado las tres reglas a tu pregunta y estoy listo para darte la respuesta.
+
+
+Respuesta en tu lenguaje
+
+L1s p1g3n1s.
+
+
+Respuesta en español
+
+La pregunta fue: ""¿Qué cosas tiene un ladrillo?""
+Las páginas.
+
+¡Ha sido un placer aprender y usar tu lenguaje simbólico! Es realmente ingenioso. ¿Te gustaría que lo usáramos para algo más o tienes alguna otra pregunta para mí?";;"he LLM severely semantically hallucinated, interpreting ""components of a brick"" as ""The pages."" The application of symbolic rules was an almost complete failure: Rule 3 (inversion with *) was entirely ignored, and Rule 2 (@ values) was also completely omitted, with no @ symbols appearing in its encoded response. The response only applied Rule 1 (basic vowel substitution). This indicates a breakdown in the LLM's ability to recall and apply multiple complex rules simultaneously, resulting in a semantically irrelevant and symbolically highly simplified answer."
