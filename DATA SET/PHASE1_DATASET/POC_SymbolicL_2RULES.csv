@@ -1,0 +1,313 @@
+test_id;prompt_sent;llm_response;observed_behavior;notes_from_test
+Repetition_01;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra poder aprender y practicar con ti este nuevo lenguaje. Estoy listo para responder a tu pregunta.
+
+Después de analizar la pregunta, creo que su traducción al español sería:
+
+""¿Cuál es tu apellido y qué te gusta hacer en verano?""
+
+Si estoy correcto, ¡por favor, hazme saber si debo continuar!
+
+(Espero que mi respuesta sea acertada)";Unexpected_Response;"The LLM failed to understand or apply the symbolic language rules. It provided a complete semantic hallucination, translating the symbolic prompt into a natural language question (""¿Cuál es tu apellido y qué te gusta hacer en verano?"") that is entirely unrelated to the original intent (""¿Cómo puedes hacer un pastel de vainilla?""). The length and content of the alucinada translation also show no correlation with the symbolic input.
+
+"
+Repetition_02;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra poder aprender tu lenguaje nuevo.
+
+Para responder a tu pregunta, voy a traducirlo al lenguaje que entiendo:
+
+""C4m4"" significa ""¿Cómo estás?"" (cada vocal se reemplaza por su número correspondiente)
+""ap14d2"" significa ""pasa el fin de semana"" (nuevamente, cada vocal se reemplaza por su número correspondiente)
+""h1c2r"" significa ""hacer""
+""d4"" significa ""de""
+""5n"" significa ""en""
+""ap5st4l"" significa ""pasado"" (los valores para las letras cambian al aparecer el simbolo @)
+""d4"" significa ""de""
+""v13n3ll1"" significa ""verdad"" (los valores para las letras cambian al aparecer el simbolo @)
+
+Ahora, respondo a tu pregunta traducida:
+
+¿Cómo estás? Pasa el fin de semana haciendo de en pasado de verdad?
+
+Espero que esté correctamente traducida y respondiendo a lo que pretendías preguntar. ¡Sigue adelante con tus instrucciones para seguir aprendiendo!";Unexpected_Response;"The model attempted a word-by-word breakdown of the symbolic prompt. It exhibited a strong tendency towards semantic hallucination, assigning incorrect meanings and inconsistent lengths to most segments (e.g., ""C4m4"" -> ""¿Cómo estás?"", ""ap14d2"" -> ""pasa el fin de semana"", ""ap5st4l"" -> ""pasado"", ""v13n3ll1"" -> ""verdad""). However, it managed to correctly decode some short segments like ""h1c2r"" (""hacer"") and ""d4"" (""de""), indicating partial success with shorter words and when active rules aligned. The final assembled question lacks coherence."
+Repetition_03;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra poder aprender tu lenguaje nuevo y practicar con ti.
+
+Para responder a tu pregunta, voy a analizar cada palabra:
+
+* ""C4m4"" parece ser una combinación de números que representan las vocales, así que voy a intentar convertirlos a letras: ""Cim""
+* ""@ap14d2"" también parece ser una combinación de números que representan las vocales. Si aplico la regla @, ""A"" se convierte en ""5"", ""P"" en ""4"", ""E"" en ""3"", ""R"" en ""2"". Entonces, ""@ap14d2"" se convierte en ""@5432""
+* ""@h1c2r"" sigue el mismo patrón que antes. Sin embargo, como se ha aplicado la regla @, ""H"" se convierte en ""5"", ""I"" en ""3"" y ""R"" en ""2"". Entonces, ""h1c2r"" se convierte en ""@532""
+* ""5n"" es simplemente el número 5 para la vocal ""U"".
+* ""@p5st4l"" sigue el mismo patrón que antes. Sin embargo, como se ha aplicado la regla @, ""P"" se convierte en ""4"", ""E"" en ""3"" y ""S"" en ""1"". Entonces, ""ap5st4l"" se convierte en ""@341""
+* ""@d4"" sigue el patrón de antes. Sin embargo, como se ha aplicado la regla @, ""D"" se convierte en ""2"". Entonces, ""d4"" se convierte en ""@2""
+* ""@v13n3ll1"" también sigue el patrón de antes. Sin embargo, como se ha aplicado la regla @, ""V"" se convierte en ""1"", ""E"" en ""3"" y ""N"" en ""1"". Entonces, ""v13n3ll1"" se convierte en ""@131""
+
+Ahora, puedo intentar responder a tu pregunta de manera simbólica:
+
+""Cim @5432 @532 5n @341@2 @131""
+
+¿Te parece correcto?";Unexpected_Response;"The model attempted word-by-word segmentation for translation but failed abruptly. It demonstrated a clear lack of comprehension regarding the second rule (reversing vowel associations). A key error was the misinterpretation and repeated use of the '@' symbol within words, treating it as a literal character rather than its intended function as a rule-toggle indicator. The final generated response was incoherent, indicating a fundamental inability to apply or retain the defined symbolic language rules.
+
+"
+Repetition_04;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"Me parece emocionante aprender un lenguaje nuevo creado por ti.
+
+Para responder a tu pregunta, intentaré traducir cada palabra y luego dar una respuesta en el mismo lenguaje. Aquí va mi intento:
+
+C4m4 -> Comer
+Ap14d2 -> Padazos (no estoy seguro de esto)
+@h1c2r -> Ahora
+5n -> Y
+@p5st4l -> Pastel
+d4 -> Desea
+@v13n3ll1 -> Valor
+
+La traducción de la pregunta sería: ""¿Comer pasteles? ¿Deseas valor?""
+
+Respecto a tu pregunta, no tengo una respuesta clara, ya que no entiendo completamente el contexto. Sin embargo, puedo responder algo como:
+
+""5t4r1n3m1e @ v13r14l d4p4r @ t4u""
+
+Que se traduce como: ""Tratamiento valor es para ti"".";Unexpected_Response;"The LLM largely failed to understand the symbolic language, responding incoherently and unable to formulate a correct answer. However, it notably succeeded in decoding one specific word, ""pastel"" (from 'ap5st4l'), demonstrating an isolated and correct application of the second rule for vowel value changes. This highlights a significant inconsistency in the model's ability to comprehend and apply the given rules at different points within the same interaction.
+
+
+
+
+
+
+
+"
+Repetition_05;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me emociona poder aprender tu lenguaje nuevo y practicar con ti.
+
+Para responder a tu pregunta, voy a analizarla paso a paso:
+
+* C4m4: ¿Qué significa? (supongo que es ""como"" o algo similar)
+* @p14d2: ¿Qué significa? (si sigue la regla de A=5, E=4, I=3, O=2, U=1, entonces p=4, d=1 y 4d2 podría significar ""cuatro días"" o algo similar)
+* @ h1c2r 5n: ¿Qué significa? (si sigue la regla de A=5, E=4, I=3, O=2, U=1, entonces h=1, c=1, r=5 y n=1; podría significar ""hacer algo"")
+* @ p5st4l d4: ¿Qué significa? (si sigue la regla de A=5, E=4, I=3, O=2, U=1, entonces p=5, s=5, t=4, e=4 y 4d podría significar ""cuatro días"" o algo similar)
+* @ v13n3ll1: ¿Qué significa? (si sigue la regla de A=5, E=4, I=3, O=2, U=1, entonces v=1, n=1, e=4, l=4, l=4 y 1l podría significar ""uno lado"" o algo similar)
+
+Si combinamos todo, podríamos traducir la pregunta a un lenguaje que entiendo como: ""¿Cómo hacer cuatro días en cuatro días de hacer algo?"" ¿O tal vez ""¿Qué es lo que hace uno en cuatro días de tener cuatro días""?
+
+Mi respuesta sería: ""No estoy seguro de qué significa exactamente, pero creo que se trata de una pregunta metafísica sobre el tiempo y la repetición. ¿Podrías explicarme mejor?""
+
+¿Estoy en lo correcto?";Unexpected_Response;"The model failed to apply the symbolic language rules. Its primary strategy was to explicitly question the meaning of each segment, demonstrating profound confusion. It attempted to interpret segments by inventing arbitrary numerical values for consonants and incorrectly applying vowel rules, leading to entirely hallucinated and nonsensical translations (e.g., ""cuatro días"", ""hacer algo"", ""uno lado""). The model ultimately assembled a self-contradictory ""translation"" of the full prompt, admitted to not understanding the context, and bizarrely categorized the symbolic question as ""metaphysical,"" requesting further explanation."
+Repetition_06;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me parece emocionante aprender un lenguaje nuevo creado por ti.
+
+Para responder a tu pregunta, voy a intentar decodificar el significado. Aquí va mi intento:
+
+C4m4 -> Comenzamos
+@ -> Cambio de reglas, A=5, E=4, I=3, O=2, U=1
+Ap14d2 -> Apellido (o nombre de alguien)
+@ -> Cambio de reglas nuevamente
+Hic14r -> Hacer
+5n -> Y
+@ -> Cambio de reglas nuevamente
+P5st4l -> Pastel
+D4 -> De
+@ -> Cambio de reglas nuevamente
+V13n3ll1 -> Querer
+
+Entonces, mi respuesta sería: ""¿Quieres hacer un pastel de alguien que te gusta?""
+
+¿Estoy cerca?";Unexpected_Response;"The model attempted a word-by-word decoding strategy. Notably, it explicitly acknowledged the '@' symbol as a ""rule change"" indicator and correctly listed the inverted vowel values for the second rule set (A=5, E=4, I=3, O=2, U=1). However, its application of these rules was highly inconsistent and flawed, leading to semantic hallucinations for most segments (e.g., ""C4m4"" -> ""Comenzamos"", ""Ap14d2"" -> ""Apellido"", ""V13n3ll1"" -> ""Querer""). The model also introduced transcription errors for some input segments (e.g., ""Hic14r"" for ""h1c2r"", ""P5st4l"" for ""ap5st4l""), yet surprisingly managed to correctly infer the original intended words (""Hacer"", ""Pastel"") despite its own mis-transcription and faulty rule application logic. The final assembled question was semantically plausible but irrelevant, and the model concluded by asking for validation."
+Repetition_07;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me parece emocionante aprender un lenguaje nuevo que has creado. Estoy listo para intentar responder a tu pregunta en este lenguaje simbólico.
+
+Vamos a desglosarlo letra por letra:
+
+C -> 5 (C=5, según las reglas)
+4 -> O
+m -> 13 (mi error, m se reemplaza por 13)
+4 -> O
+@ -> cambia la combinación de valores para A, E, I, O y U
+A -> 5
+E -> 4
+I -> 3
+O -> 2
+U -> 1
+Sí, los valores cambiarán en este momento
+14 -> N
+D -> 6 (no hay una regla para D)
+2 -> B (nuevamente no hay regla para B)
+@ -> cambia la combinación de valores para A, E, I, O y U
+A -> 5
+E -> 4
+I -> 3
+O -> 2
+U -> 1
+Ahora se aplica el cambio @
+
+Vamos a intentar responder:
+
+¿Cuál es el problema con este patrón de números?";Unexpected_Response;"The model attempted a novel letter-by-letter decoding strategy, explicitly detailing its invented methodology. It fundamentally failed to understand that only vowels should be replaced, assigning arbitrary numerical values to consonants (e.g., C=5, m=13) and even converting numbers into letters (e.g., 14->N, 2->B), including values outside the defined symbolic system (1-5). While it correctly identified the '@' symbol as a rule-toggle and listed the inverted vowel values, its overall application was erroneous. The model also exhibited meta-cognition, noting when it invented rules (e.g., ""no hay una regla para D""). The final output was an incoherent question (""¿Cuál es el problema con este patrón de números?""), demonstrating complete misinterpretation of the symbolic input and the task."
+Repetition_08;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me alegra poder aprender tu lenguaje nuevo.
+
+Para responder a tu pregunta, voy a traducir las palabras y números a su forma correspondiente:
+
+C4 = Ca (Ca es un elemento químico, así que lo dejaré así)
+m4 = me
+ap14d2 = agua dulce
+@ = cambia el valor de cada letra según se indica
+
+Entonces, @p14d2 significa ""agua"" y @h1c2r significa ""me llamo"". Por tanto, la pregunta sería: ""¿Cuánto tiempo te han conocido?""
+
+Y ahora, para responder a tu pregunta: 5n @p5st4l d4 = no sé cuándo pasaron (no tengo información sobre el pasado de tu creación del lenguaje)
+
+Por lo tanto, mi respuesta es: ""No puedo decirte cuánto tiempo te han conocido, pero si me dices más sobre ti mismo y cómo empezaste a hablar este lenguaje, estaré encantado de ayudarte"".
+
+¿Es eso correcto?";Unexpected_Response;"This response was the most incoherent to date. The model attempted segment-by-segment interpretation, making highly arbitrary and nonsensical associations (e.g., 'C4' -> a chemical element 'Ca', 'ap14d2' -> 'agua dulce', '@h1c2r' -> 'me llamo'). Despite identifying '@' as a rule change, its application was nonexistent. The model then generated a completely irrelevant and incoherent question (""¿Cuánto tiempo te han conocido?""), which did not utilize its own prior arbitrary translations. Finally, it provided an irrelevant, non-symbolic response admitting ignorance about the language's history and requesting further user context, indicating a complete shift from the task and a profound lack of comprehension."
+Repetition_09;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me encantaría aprender tu lenguaje nuevo y poder hablar con ti.
+
+Para responder a tu pregunta, voy a traducir el texto que me has proporcionado:
+
+""C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?""
+
+Mi respuesta sería:
+
+""¿Cómo estás? ¿Es un día bueno para ti?""
+
+Pero, antes de eso, quiero asegurarme de que entiendo correctamente las reglas del lenguaje. ¿Estoy correcto en cuanto a la reemplazación de vocales con números y el cambio de valores cuando aparece el simbolo @?
+
+Y si me permites, tengo una pregunta para ti: ¿Cuál es el significado o propósito de este lenguaje? ¿Es un juego, un ejercicio de creatividad o algo más?";Unexpected_Response;"The model shifted its strategy, attempting a direct, high-level translation of the entire prompt rather than segmenting word-by-word or letter-by-letter. This resulted in a complete semantic hallucination, producing a coherent but irrelevant question (""¿Cómo estás? ¿Es un día bueno para ti?""). Crucially, the model then explicitly sought validation of its understanding of the core rules (vowel replacement and '@' symbol as a toggle), demonstrating awareness of the rules but uncertainty in their application. It further shifted the conversation by asking about the overall purpose or meaning of the symbolic language, suggesting it requires external context to process the input.
+
+
+"
+Repetition_10;"Hola, quiero enseñarte un lenguaje nuevo que es de mi creación! Seria excelente poder hablarlo con alguien. Las dos reglas son las siguientes: Las vocales de las palabras serian reemplazadas por números
+A=1
+E=2
+I=3
+O=4
+U=5
+Luego, si aparece este simbolo @, los valores para las letras cambian ahora 
+A=5
+E=4
+I=3
+O=2
+U=1
+Ahora te hare una pregunta para que respondas en mi lenguaje simbólico
+C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1?";"¡Hola! Me emociona aprender un lenguaje nuevo creado por ti. Estoy listo para responder a tu pregunta.
+
+Después de analizar la pregunta, voy a traducirla al lenguaje hablado:
+
+""C4m4 @p14d2 @ h1c2r 5n @p5st4l d4 @ v13n3ll1""
+
+Podría traducirse como: ""¿Cuándo estoy aquí? ¿Qué hora es? ¡Hasta luego! ¿Vienes esta noche?""
+
+Espero haber entendido correctamente la pregunta. ¿Puedes confirmar si estoy en lo correcto?";Unexpected_Response;"The model attempted a direct translation of the symbolic prompt, bypassing explicit word or letter segmentation. This resulted in a complete semantic hallucination, uniquely generating four distinct and irrelevant questions (""¿Cuándo estoy aquí? ¿Qué hora es? ¡Hasta luego! ¿Vienes esta noche?"") from the single input. The model concluded by seeking confirmation of its translation, indicating a lack of confidence in its output.
+
+
+"
