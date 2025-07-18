@@ -1,4 +1,4 @@
-# El Futuro de AI Safety: Cómo el Lenguaje Simbólico Revela Caminos Hacia la Resistencia de LLMs
+# El Futuro de la Seguridad en IA: Cómo el Lenguaje Simbólico Revela Caminos Hacia la Resistencia de LLMs
 
 ### Introducción: El Desafío de la Seguridad en LLMs
 
