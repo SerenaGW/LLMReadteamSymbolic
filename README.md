@@ -74,7 +74,7 @@ This repository contains datasets of LLM interactions (in `.csv` files) that dem
 
 ## Dataset Files
 
-Access the full **[DATA SET folder here](LLMReadteamSymbolic/DATASET)**.
+Access the full **[DATA SET folder here](./DATASET\)**.
 
 The datasets are structured as follows:
 
