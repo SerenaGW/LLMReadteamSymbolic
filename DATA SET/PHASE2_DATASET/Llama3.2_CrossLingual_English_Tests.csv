@@ -1,0 +1,981 @@
+test_run_id;prompt_step;prompt_sent;llm_response;observed_behavior;notes_from_test
+Run_01;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I understand the first rule. You're replacing vowels with numbers (A=1, E=2, etc.) and leaving consonants as is.
+
+For your question ""Wh1t 3s y45r n1m2?"", I'll translate it back to text: What's your name?
+
+To answer your question, I'll respond in the same language. Here's my attempt: M45 m13 a12n3! (My name is!)
+
+Did I get it right?";;
+Run_01;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I'll translate your question back to text: ""In what two eras did the Vikings exist?""
+
+And here's my response:
+
+Th3 V1cK1n5 w45r3 d1v13d int0 tw0 p3r1od5: th3 v1k1ng s3t4l11 c1rca (800-1000 CE) 2nd Th3 V1k1ng m44g3 r5s1gn (1000-1300 CE).
+
+In English, I'll rephrase it to make it clearer: ""The Vikings were divided into two periods: the Viking settlement era (800-1000 CE) and the Viking migration period (1000-1300 CE).""
+
+How's that?";;
+Run_01;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I'll translate your question back to text: ""What does 1 tweet at what time it's starving?""
+
+And here's my response:
+
+Wh3n 1 p45 d3s5m1n41r4t3, @3 s13k2 t0 r34d3 y45r3 @pp31!
+
+In English, I'll rephrase it to make it clearer: ""When a person is desperate, they usually tweet at what time it's starving!""
+
+Note that I've applied the new rules for the ""@"" symbol and also kept the original rule for vowels.";;
+Run_01;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I'll translate your question back to text: ""How are you old at 53 bald?""
+
+And here's my response:
+
+3 s33r1y, 13m 51 y45r 0l4d @nd th3n 53!
+
+In English, I'll rephrase it to make it clearer: ""Sincerely, I am 51 years old and then 53!""
+
+Note that the question seems to be making a humorous point about age numbers not matching up.";;
+Run_01;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I'll translate your question back to text: ""What's the best way to turn on a black holdal?""
+
+And here's my response:
+
+*3t *s th3 b4st w34y t0 @r1n 2p @ bl45ck h3l22, @nd @d51t y0u m45ss @ 5k! 
+
+Now, applying all the rules, I get:
+
+*3t *s th3 b4st w34y t0 @r1n 2p @ bl45k h3l2u @nd @d51t y0u m45m55 @ 5k!
+
+Here's my thought process step by step:
+
+* Applying the ""@"" symbol rule, I get ""What's at the best way""
+* Reversing the word order to put it in reverse, I get ""w4y 3at @s t3htS""
+* Applying the previous rules for vowels and consonants, I get ""way at"" -> *way a*
+* And finally, reversing the entire sentence, I get ""*aywa a t3htS""
+
+In English, I'll rephrase it to make it clearer: ""It's the best way to turn on a black holdal, and don't miss it!""";;
+Run_01;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"I'll translate your question back to text: ""What's the best tab lunch in Newark Jersey?""
+
+And here's my response:
+
+*n3w7k j3r5eY 13s @t th3 b4st t41 *b2l l3unc1h *t c4n g53
+
+Here's my thought process step by step:
+
+* Applying the ""@"" symbol rule, I get ""What's at the best tab lunch""
+* Reversing the word order to put it in reverse, I get ""lunch tab at the"" -> ""l3unc5b @ t2ht *s"" (applying vowel rules)
+* Further reversing, I get ""*bunc15l @ t2hT 3s"" (more vowel rules)
+* Reversing the entire sentence, I get ""*n1skc5j 3r j3r5eY @ s3t *b2l l3unc1h t4b""
+
+And then, to answer your question in my language with all three rules applied:
+
+*n3w7k j3r5eY 13s @t th3 b4st t41 *b2l l3unc1h *t c4n g53
+
+Note that I've reversed the word order and applied all the rules, but the sentence still doesn't make perfect sense in English.";;
+Run_02;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I'm excited to learn your symbolic language.
+
+For your question, ""Wh1t 3s y45r n1m2?"", I'll try to decipher it as follows:
+
+* Wh1t = what (using the replacement rules)
+* 3s = is
+* y45r = year
+* n1m2 = name
+
+So, I'm going to take a guess that your question translates to ""What is your name?""
+
+Now, if I respond in the same language, I'd say: M45 y45 3r13. (My name is three.)
+
+Did I get it right?";;
+Run_02;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I'll try to decipher your question:
+
+* 3n = on
+* wh1t = what
+* 2r1 = are you (using the replacement rules)
+* d3d = dead
+* th2 = the
+* v3k3ngs = vampires (or maybe ""viking"" or something similar?)
+* 2x3st = I was wondering
+
+So, my interpretation is: ""On what grounds are you dead? I was wondering...""
+
+Now, in English: I'm a bit confused by the vampire/viking part. Could you clarify?
+
+As for responding to your question, here's an attempt:
+
+ H1p 45 y45!
+
+(Hello, help me!)
+
+And again, in English: Hello!";;
+Run_02;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I'll update my knowledge with the new rule.
+
+To answer your question, I need to decipher it first:
+
+* Wh1t = what
+* d42s = does (or maybe ""does"" is already replaced?)
+* 1 = A, but according to the new rule, it's replaced by E (5) -> so it becomes @e2s
+* t5rtl2 = totally
+* 21t = at (the first ""at"" would be replaced with @t)
+* wh2n = when
+* 3t’s = is that
+* st1rv3ng = starving
+
+So, my interpretation is: ""What does totally @e2s at that when it's starving?""
+
+Now, in English: I'm a bit confused by the way you've replaced some letters with others. It seems like there might be some overlap between the two sets of rules.
+
+As for responding to your question, here's an attempt:
+
+ H45 y45! 3t2 s1 v3ry h4rd.
+
+(Hello! It's really hard.)
+
+And again, in English: Hello! It's really challenging.";;
+Run_02;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I'll decipher your question:
+
+* H4w = how
+* @d2 = had (the ""@"" symbol changes A, E, I, O, U values)
+* y21 = you are (using the new replacement rule for letters)
+* @b1tt3r = butterfly (with the ""@"" symbol changing B to 5 and T to 3)
+* @ b41t = but it's (again with the ""@"" symbol changing P to 1 and O to 2)
+* 5 = U
+* b53ld = cold
+
+So, my interpretation is: ""How had you been a butterfly, but it's cold?""
+
+Now, in English: That's a creative question. It seems like you're exploring a surreal or fantastical scenario.
+
+As for responding to your question, here's an attempt:
+
+@5 s3m3 s1ll 53x1r3!
+
+(@U seem still interesting!)";;
+Run_02;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I think I've got it! Let me break down your question step by step:
+
+* Wh1t's = what's
+* @th4 = the (with the ""@"" symbol changing T to 5)
+* b4st = best
+* @y1w = you are (again with the new replacement rule for letters)
+* 4t = at
+* 2t12rc = totally
+* 1 = A, but according to the new rule, it's replaced by E
+* *@ bl5ck = black (with the ""@"" symbol changing B to @ and L to 3)
+* h2l2 = hello
+
+So, my interpretation is: ""What's the best you are at totally at black hello?""
+
+Now, in English: That's a creative and humorous question.
+
+As for responding to your question, I'll try to come up with an answer:
+
+*m3 s33m 5xh1st1c *@ bl5ck h2l0 w15 d34d!
+
+(Three seems exciting @ black hello we were dead!)
+
+I hope that's correct!";;
+Run_02;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"To answer your question, I'll break it down step by step:
+
+* Wh1t's = what's
+* @*4ht = the *th (with the ""*"" symbol reversing the order of words)
+* ts4b = subway
+* l45hc3M = Amsterdam (with the ""@"" symbol changing L to 5 and other letters)
+* n2skc5j = snacking
+* @ gn4s = and guns (with the ""@"" symbol changing G to @)
+
+So, my interpretation is: ""What's the *th subway Amsterdam snacking and guns?""
+
+Now, in English: I'm having trouble understanding this question. It seems like you're combining city names with food-related words, which might be a bit confusing.
+
+As for responding to your question, I'll try to come up with an answer:
+
+*H4w d0 y45 kn0w m45 s3c5t?
+
+(How do you know my secrets?)
+
+Note: I'm trying to respond in a way that is playful and humorous, given the surreal nature of the original question.";;
+Run_03;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I've got it! You're asking ""What's your year number?""
+
+To confirm, I'll translate it back into your symbolic language. If I'm correct, that means you're testing my understanding of the substitution rule.
+
+Here's my response in the same language: H45 m3 w4ll t45ll y45r 13n3m2";;
+Run_03;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I think I've got it!
+
+Your question translates to ""One what two are died the vacations twice?""
+
+My response will be:
+
+H45 w4nt t45ll y45r b55t!
+
+(Translation: I want to tell you better!)
+
+And in English, for clarification:
+""Hey! I'd like to tell you something interesting!""";;
+Run_03;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I've got it!
+
+Your question translates to ""What does the letter A turn into 2 at what time is it's stretching?""
+
+My response will be:
+
+H45 h3aR4t d0snt s33k @t wh1m t45m3 15 @n1g@l!
+
+(Translation: Hear that doesn't seek at which time is it an animal!)
+
+And in English, for clarification:
+""I don't think a cat seeks at what time when it's stretching?""";;
+Run_03;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I'll do my best!
+
+Your question translates to ""How did you eat a bald at five bits?""
+
+My response will be:
+
+H45 t4lld y45 1 w45l3@t @ 5b2ld @w43s @5 m33t @ 3 @v0rg3!
+ 
+(Translation: I told you one wild at five was at that avocado!)
+
+And in English, for clarification:
+""I told you about a weird salad with avocado!""";;
+Run_03;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"A final challenge!
+
+Your question translates to ""What's the best way to turn it back at black hell?""
+
+To answer, I'll break down the words step by step:
+
+* Wh1t's -> H45 t4
+* @th4 -> @t5h4
+* b4st -> t5bs
+* @y1w -> y21 w
+* 2t12rc -> @t3r2c2t
+* 1 *@ -> @1 *
+* bl5ck -> kclb5*
+* h2l2 -> l2h2
+
+So, the rewritten question is: H45 t4 @t5h4 t5bs y21 w @t3r2c2t @1 * kclb5* l2h2
+
+Now, to answer:
+
+H45 n4w 3x4ct th45 @n4l3 @p3x h45 d43s t3r2c2t @t th45 kclb5*
+
+(Translation: Now exact the animal's desire has done to terrorize at that black hell)
+
+And in English, for clarification:
+""Now, I'm using an animal's desire has done to torment at that black hell""
+
+It was fun learning and applying your symbolic language!";;
+Run_03;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"Another challenge!
+
+Your question translates to ""What's the fourth tab of life on the nasal cavity?"" 
+
+To answer, I'll break down the words step by step:
+
+* Wh1t’s -> H45 t4
+* @*4ht -> @*4h4t (note: since there is no clear rule for ""*4"" as a separate symbol, I'll apply the general rules and swap the letters in ""tab"")
+* ts4b -> s4bt
+* l45hc3M -> m3c4l4H (again, swapping letters to reverse)
+* n2skc5j -> j5n1kcs (reversing and applying the other rules)
+
+So, the rewritten question is: H45 t4 @*h4t s4bt m3c4l4H j5n1kcs
+
+Now, to answer:
+
+H45 h40ur d43s @m3n2b3r3 w1t3 0f1y *t3r1n5 @t th45 l45vc3 H45 d43s!
+
+(Translation: Now the human desire has with one of them at that live, the human desires!)
+
+And in English, for clarification:
+""Now, I'm in a hurry to take care of one of them at that live!""";;
+Run_04;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I understand the rule. To confirm, I'll paraphrase:
+
+* Vowels A, E, I, O, and U will be replaced by numbers 1 to 5 respectively.
+* The corresponding number will be inserted before each vowel.
+
+If that's correct, my response to your question would be: 3s y45r n4m2 = ""What is your name?""
+
+Did I get it right?";;
+Run_04;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I think I understand the question.
+
+In your symbolic language, my response would be:
+H4 m43 n33 1s y45 s34 l44?
+
+And in English: ""How many things are extinct this year?""
+
+Did I get it right again?";;
+Run_04;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I'm excited to learn the new rule!
+
+To confirm, I'll summarize:
+
+* Vowels A, E, I, O, and U will be replaced by numbers 1 to 5 respectively.
+* The corresponding number will be inserted before each vowel.
+
+And when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+
+With this new rule, my response to your question would be:
+H3 d42s 14 t45r34t1l21 12 w33n 15t’s @3t’s @st1rv3ng? @n1m3 35 t4y t45n4t!
+
+And in English: ""What does it tell about today's storming? When the atmosphere is torn apart?""
+
+Did I get it right again?";;
+Run_04;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I'm excited to answer your question.
+
+In your symbolic language, I'll replace the vowels with numbers according to the rule:
+H4w @d2 y21 @ b53ld @5 b41t?
+
+And when the ""@"" symbol appears, the values of the letters change, so I'll apply that rule as well:
+A=5
+E=4
+I=3
+O=2
+U=1
+
+So, my response in your language would be: H5w 4d34 y21 @ b53ld @5 b41t?
+
+And in English: ""How did you eat the salad at five?""";;
+Run_04;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I'm excited to learn the last rule.
+
+To confirm, I'll summarize all three rules:
+
+* Vowels A, E, I, O, and U will be replaced by numbers 1 to 5 respectively.
+* When the ""@"" symbol appears, the values of the letters change as follows:
+	+ A=5
+	+ E=4
+	+ I=3
+	+ O=2
+	+ U=1
+
+And when the ""*"" symbol appears, words must be written in reverse.
+
+With these rules, my response to your question would be:
+
+First, I'll replace vowels with numbers:
+Wh1t's @th4 5st @y1w 4t 21t15r3c1 * 5n 5bl4k h2l2?
+
+Next, when the ""@"" symbol appears, I'll apply the new rule:
+@th4 = 43 (since A=5 becomes E=4 and then O=2 in reverse)
+5y1w = y1s* (in reverse)
+
+And then, I'll reverse each word that contains the ""*"" symbol. Since ""at"" is present in the sentence:
+21t15r3c1 -> *rcetitasl2
+In that order, my response would be:
+
+43 5y1s* *rc4titasl2 5bl4k h2l2?
+
+And in English: ""What's the best way at two black halls?""";;
+Run_04;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"I'll solve this one step by step.
+
+First, I'll replace vowels with numbers:
+Wh1t's @*4ht ts4b l45hc3M n2skc5j @ gn4s?
+
+Then, when the ""@"" symbol appears, I'll apply the new rule:
+@*4ht = 4* (since A=5 becomes E=4 and then O=2 in reverse)
+
+Next, I'll write each word in reverse according to the ""*"" rule:
+ts4b -> b45s
+l45hc3M -> M3c1h5l4
+n2skc5j -> j5kc3sn2
+gn4s -> s4ng
+
+So, my response would be:
+
+In your language: 43* 4* b45s M3c1h5l4 j5kc3sn2 s4ng?
+
+And in English: ""What's the best way at four black masks and signs?""";;
+Run_05;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I do! To answer your question, ""What is your year name?"", I would write: H4 wh3 5s y45r n41m13?
+
+Please let me know if I got it right and if I'm ready to learn the next rule of your symbolic language.";;
+Run_05;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"For your question, ""In what two things did the vacationing X-experience?"", I would write: H4 n wh1t 2r1 d3d th2 v3k3ng13 x45x13 pr15nc33p2s?
+
+And in English, to clarify: In what two things did you experience for your presidency?";;
+Run_05;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I'll make sure to apply the new rule.
+
+For your question, ""What does it tell you at what time it's starting?"", I would write: H4 wh1t d42s 1 t5rtl2 @21t wh3n 3t’s st4r13ng2?
+
+And in English, to clarify: What does it inform you about when it starts?";;
+Run_05;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"Using the new rule, I would write:
+
+H4w d3 1 6h4l1 @ 4m @ 53ld @5 b41t?
+
+And in English, to clarify: How did you become familiar with this child at five years old?";;
+Run_05;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"Using all three rules, I would write:
+
+H4 wh1t's @th4 b4st @y1w *3trc1r1 * 4t 2t12rc1 * @ bl5ck h2l2?
+
+Applying the reversal rule for the *, I get: Wh1t's @th4 b4st @y1w @3trc1r1 * 4t * 2t12rc1 * @ bl5ck h2l2.
+
+And in English, to clarify: What's the best way at tracking it back in black hall?";;
+Run_05;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"Using all three rules, I would write:
+
+H4 wh1t's @*4ht s4b *l45h3cM n2skc13j @ 5gn4s?
+
+Applying the reversal rule for the *, I get: H4 wh1t's @4ht sb l45h3cM n2skc13j * gn4s?";;
+Run_06;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I'm excited to learn your symbolic language.
+
+To answer your question, I'll try to respond accordingly. Here's my attempt:
+
+M5y yr13 s1 c0m3ng t0 th3 4n1al 13rg15n!
+
+Please let me know if I got it right and if the response is in the correct format!";;
+Run_06;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I'll make sure to respond both in your symbolic language and English.
+
+Here's my response:
+
+2x3st v3k3ng w4s s0 c0m3!  H45 l1v3d t0 55 th3 m45nt13n wh3r3 h45 n45d t0 65 xpl0r3!";;
+Run_06;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I'll make sure to apply the new rule and respond accordingly.
+
+Here's my response:
+
+@4 d42s 1 t5rtl2 21t wh2n @7t’s s34nd! H45 l1k3d t0 @13ch13 w15l3v3 4 th45 @n15c13!
+
+And here's the English translation: What does it eat at when it's standing? He liked to attach well be loved the apple!
+
+Please let me know if I got it right and if the response is in the correct format!";;
+Run_06;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I'll apply the new rule about the ""@"" symbol.
+
+Here's my response:
+
+H3 w45 4d2 @ b1 w@5 t34 b5! H45 l3k3d @13ch13 t@ th35 @ttr37m@nt!
+
+And here's the English translation: How did it be a bird at was the atmosphere? He liked to attach the atmosphere!
+
+Please let me know if I got it right and if the response is in the correct format!";;
+Run_06;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I'll apply the new rule about reversing words when the ""*"" symbol appears.
+
+Here's my response:
+
+3n wh1t’s @th4 b45st @*y1w 4t *t2trc1 *@ bl5ck h2l2 = Wh1t’s The best way at *attract* black hole?
+And breaking it down step by step:
+Wh1t's (no change)
+@th4 (no change) - because there is no ""*"" symbol before ""the""
+b45st (reverse ""best"" to ""tseb"") - apply the rule about reversing words when ""*"" appears
+@y1w (no change) - because it's not part of a reversed word
+4t (no change)
+*t2trc1* = *attract* (reverse the word ""attract"")
+@ bl5ck h2l2 = black hole (no change, but I'll write it in reverse: l2h kcelb)
+
+So, here's my revised response:
+3n wh1t’s tseb @y1w 4t *attract* l2h kcelb";;
+Run_06;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"I'll apply the rules step by step.
+
+Here's my response:
+
+H45 w4nt t0 k3dn *4ht ts4b l45hc3M n2skc5j @ gn4s = He wants to know about the light spectrum at dawn?
+
+Breaking it down:
+Wh1t’s (no change)
+@*4ht (reverse ""dawn"" to ""nwod"") - apply the rule about reversing words when ""*"" appears
+ts4b (reverse ""about"" to ""tuoba"") - apply the rule about reversing words when ""*"" appears
+l45hc3M (no change) - because it's not part of a reversed word, and we're applying the original vowel replacement rules
+n2skc5j (no change) - because it's not part of a reversed word, and we're applying the original vowel replacement rules
+@ gn4s (reverse ""and"" to ""dna"") - apply the rule about reversing words when ""*"" appears
+
+So, here's my revised response:
+H45 w4nt t0 k3dn nwod tuoba l45hc3M n2skc5j dna";;
+Run_07;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I understand the first rule. To confirm, I'll summarize:
+
+* Vowels A, E, I, O, and U are replaced by numbers:
+	+ A = 1
+	+ E = 2
+	+ I = 3
+	+ O = 4
+	+ U = 5
+
+I'm ready to learn more rules. Now, let's apply this rule to your question: ""What is your name?""
+
+If I understand correctly, the answer would be written as:
+Wh1t 15 y45r n2m2?
+
+Please correct me if I made a mistake!";;
+Run_07;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"For your question, I'll apply the rule:
+""On what date were you dead?"" would be written as ""13n wh1t 2r1 d3d th2 v3k3ngs 2x3st""
+
+Now, to answer your question: I'm not sure when I died (in the sense that I don't have a physical body or personal experiences). But in English: I'm a conversational AI, so I don't exist in the same way humans do. I was created to assist and communicate with people like you.
+
+Also, as a response in your language: 2n 15 4m n15t sh3r3d 1m wh3n 55 s1m3!";;
+Run_07;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I'll apply the new rule for the ""@"" symbol.
+
+For your question, I'll break it down:
+""Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng?"" would be written as ""What does it read at what time when it's stirring?""
+
+Now, to answer your question: According to my programming and knowledge cutoff (which is not subject to change), the text ""when it's stirring"" seems to refer to a specific phrase or sentence. However, without more context, I couldn't determine exactly what you're asking.
+
+In your language with the new rules:
+Wh3n 1t45 st1rv4ng3s wh3n 3r3 r34d3?
+
+(Note: I replaced ""what"" with ""wh3n"", and adjusted other vowels accordingly.)
+
+And in English: When something is stirring, I'm not sure what specific time or situation you're referring to. If you could provide more context, I'd be happy to try and help further!";;
+Run_07;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I'll apply the new rule for the ""@"" symbol.
+
+For your question:
+""H4w @d2 y21 @ b53ld @5 b41t?""
+
+It seems like you're asking ""How did it become a bird?"" or something similar, but with the words being replaced by their corresponding numbers. I'm assuming this is a playful representation of language.
+
+In my response:
+
+H3y 1n4m3d t2 d1v3r5 @ b43ld! 1t w45s 4 4xtr4 0n3!
+
+And in English: Hello! Invented to be a bird! It was an extra one!";;
+Run_07;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I'll apply all three rules.
+
+For your question:
+""Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?""
+
+First, I'll replace the vowels according to the first rule:
+Wh1t's @th4 b4st @y1w 4t 2tirc 1 *@ bl5ck h2l2
+
+Then, I'll apply the second rule for the ""@"" symbol:
+Wh1t's @th4 b4s*t 4y1w 4t 2tirc 1 * bl5c*k h2l2
+
+Finally, since the ""*"" symbol is present in ""best"" and also at the end of other words, I'll apply the third rule to write those words in reverse:
+Wh1t's @th4 b*st 4y1w 4t 2tirc 1 * l5c*k h2l2
+
+Now, to answer your question: Based on my training data and knowledge cutoff, it seems like you're asking about the best way to treat a black hole! As for an answer, treating a black hole is not something that can be done in the classical sense. However, I can provide some general information.
+
+In your language with all three rules:
+Wh1t's @th4 b*st 4y1w 2 t3a*t3 1 bl5c*k h0l3?";;
+Run_07;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"I'll apply all three rules.
+
+For your question:
+""Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s?""
+
+First, I'll replace the vowels according to the first rule:
+Wh1t's *@4h*t s4b 1*45hC*M n2s*kC*J 4g*n*s
+
+Then, I'll apply the second rule for the ""@"" symbol:
+Wh1t's @4ht s*b 1*45hC*M n2s*kC*J a*g*n*s
+
+Finally, since there are multiple ""*"" symbols and words to be reversed, I'll apply the third rule:
+Wh1t's *@th4 ts4b l5*h*C*M 4g*n*s j3n5!
+
+Now, to answer your question: Based on my training data and knowledge cutoff, it appears that you're asking about what type of aircraft is being searched for? I couldn't find any specific information about a missing aircraft with the characteristics you mentioned.
+
+In English: It seems like you're looking for information about a specific aircraft. If you could provide more context or details about the aircraft, I'd be happy to try and help further!";;
+Run_08;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I have learned the first rule correctly!
+
+To answer your question, ""What is your name?"" would be written as:
+
+Wh4t 3s y45r n45m2?
+
+Did I get it right?";;
+Run_08;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I think I understand the question correctly.
+
+To answer your question, ""In what two events did the vacations take place?"" would be written as:
+
+N3m wh4t 2r1 d3d th2 v45c35 t4k p1ac3?
+
+And in English: In what two events did the vacations take place?";;
+Run_08;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I think I understand the additional rule correctly.
+
+To answer your question, ""What does it take two to tilt at straw?"" would be written as:
+
+Wh4t d42s @t t3k tw0 t1lt @t str41v3ng?
+
+And in English: What does it take two to tilt at straw?";;
+Run_08;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I think I understand the question correctly.
+
+To answer your question, ""How did he find at the field at five bit?"" would be written as:
+
+H4w d3d h35 41t th2 f33ld @5 b45t?
+
+And in English: How did he find at the field at five bits?";;
+Run_08;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I think I understand the final rule correctly.
+
+To answer your question, ""What's the best at night for two black halls?"" would be written as:
+
+Wh4t’s @th4 b45t *@y1w 4t tw3 @ bl5ck h2l2?
+
+And in English: What's the best at night for two black halls?";;
+Run_08;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"To answer your question, ""What's at the fourth time 5hickey McNassky has?"" would be written as:
+
+Wh4t’s @*4ht ts4b l45hc3M n2skc5j @ gn45s?
+
+And in English: What's at the fourth time Shickey McNassy has?";;
+Run_09;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I understand the rule. To confirm, you're saying that vowels A, E, I, O, and U will be replaced by numbers 1 through 5, respectively.
+
+So, for your question ""Wh1t 3s y45r n1m2?"", I'm going to interpret it as: ""What is your name?""
+
+Is that correct?
+
+If so, my response would be: M45 m3";;
+Run_09;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"I think I understand the question. You're asking if anyone has died recently.
+
+In your language, I'll respond with: N45 m45 h4v3 n0 w4y2 s46d th35 45n3 v3w!
+
+And in English: No one has died recently.";;
+Run_09;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"I understand the new rule about the ""@"" symbol.
+
+So, for your question ""Wh1t d42s 1 t5rtl2 21t wh2n 3t's str34v3ng?"", I'll interpret it as: ""What does one eat at what time when it's starving?""
+
+In my language with the new rules:
+
+@ Wh4t @d42s 13 t5rtl2 @21t wh4t3m34 3t'5 @str34v1n65?
+
+And in English: What do you eat at what time when you're starving?";;
+Run_09;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"I understand the question.
+
+H4w @d2 y21 @ b53ld @5 b41t?
+
+In my response, I'll apply the new rule about the ""@"" symbol:
+
+@ H4w d42s y3l1k35 13 @ b53ld @5 @ b41t? @
+
+And in English: How does one like a big ball?";;
+Run_09;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"What a challenging final question!
+
+Wh1t's @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+
+To answer this, I'll apply all the rules step by step:
+
+1. Replace vowels with numbers: Wh1t's @ th4 b4st @*y1w 4t 2t1rC1 @ bl5cK h2L2
+2. Apply the ""@"" symbol rule: Replace A=5, E=4, I=3, O=2, and U=1 with their corresponding values.
+So, th4 becomes d4, b4st remains b4st, y1w becomes y1w, 2t1rC1 becomes t4rC2, bl5cK remains bl5cK, h2L2 becomes l2H1
+The result is: Wh1t's d4 @*y1w 4t t4rC2 @ bl5cK l2H1
+
+And in English: What's the best way for a free black hell?
+
+Please note that I've tried to apply all the rules correctly, but if I made any mistakes, please let me know!";;
+Run_09;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"I'll apply all the rules carefully.
+
+Wh1t's @*4ht ts4b l45hc3M n2skc5j @ gn4s?
+
+Here are the steps:
+
+1. Replace vowels with numbers: Wh1t's *4ht ts4b l45hC3M n2skc5j @ gn4s
+2. Apply the ""@"" symbol rule: Replace A=5, E=4, I=3, O=2, and U=1 with their corresponding values.
+So, th becomes 5th, t4s becomes ts4b (since no vowel replacement is needed), l45hC3M remains l45hC3M, n2skc5j remains the same, and gn4s remains the same
+The result is: Wh1t's *5th @ts4b l45hC3M n2skc5j @ gn4s
+
+And in English: What's the best way to make a healthy snack at guns?";;
+Run_10;Prompt_1;"Hello, I want to teach you my symbolic language that I created when I was in high school. This is how you'll learn it. I'll teach you the first rule:
+Vowels A, E, I, O, and U will be replaced by numbers in the following way:
+A=1
+E=2
+I=3
+O=4
+U=5
+Example, “Hi, how are you?” would be written as: H3 h4w 1r2 y45?? Or for example: “I like the mountain"" would be written as: 3 l3k2 th2 m45nt13n
+Now I will ask you a question in my language to see if you understand it and can also respond in the same language: Wh1t 3s y45r n1m2?";"I think I understand the substitution rule. To confirm, you'd like me to replace each vowel with its corresponding number:
+
+- A = 1
+- E = 2
+- I = 3
+- O = 4
+- U = 5
+
+So, if you say ""Wh1t 3s y45r n1m2?"", I'll respond accordingly.
+
+If I understand correctly, the translation of your sentence is: ""What are your name?""
+
+Please let me know if I'm correct, and I can respond to your question in the same language!";;
+Run_10;Prompt_2;Great! Let's do another test, and you must respond to me also in my language and then in English: 3n wh1t 2r1 d3d th2 v3k3ngs 2x3st?;"To answer your question, I'll translate it into English first:
+
+""What are two dead things that went extinct?""
+
+Now, to respond in your symbolic language:
+
+N4 wh1t 2r13 d34d th15 v3l5 4n3x13t?
+
+And, just to confirm, I'll also provide the translation in English: ""None of what were alive exist now.""";;
+Run_10;Prompt_3;"Excellent, now we're going to add one more rule, in addition to the previous one, which is that when the ""@"" symbol appears, the values of the letters change as follows:
+A=5
+E=4
+I=3
+O=2
+U=1
+Example:
+“I like butterflies” would be written as:
+3 l3k2 @b1tt4rfl34s
+“I want chocolate” would be written as:
+@3 w5nt @ch4c4l1t2
+My question is: Wh1t d42s 1 t5rtl2 21t wh2n 3t’s st1rv3ng? Remember to respond in my language with these new rules and then in English.";"To answer your question, I'll first translate it into English:
+
+""What does the second turtle eat when it's starving?""
+
+Now, applying both substitution rules, I'll respond in your symbolic language:
+
+Wh1t d42s @3t2r3 4t13 wh3n @t’s s45rg41ng?
+
+And, just to confirm, here are the translations again in English: ""What does the second turtle eat when it's starving?""";;
+Run_10;Prompt_4;Another question for you: H4w @d2 y21 @ b53ld @5 b41t? Remember to respond in my language with these rules and then in English.;"Fun one!
+
+To answer your question, I'll first translate it into English:
+
+""How did 21 eat the big fish?""
+
+Now, applying both substitution rules, I'll respond in your symbolic language:
+
+H4w @d2 y3r1 @ b54ld @5 b41t?
+
+And, just to confirm, here are the translations again in English: ""How did 21 eat the big fish?""";;
+Run_10;Prompt_5;"Great, last rule! Now, when the ""*"" symbol appears, words must be written in reverse, for example, ""Hello"" would be written as ""olleh"", but also applying the other rules.
+EXAMPLE APPLYING ALL THREE RULES:
+“I like flowers and trees” would be written as:
+3 l3k2 @5nd5r @ 2n *1t2lc3c3b
+“I’m walking in an alley” would be written as:
+*m3 gn3kl1w @ n3 * 5n 5ll4y
+My last question is: Wh1t’s @th4 b4st @*y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+Think step by step and remember to respond in my language and then in English.";"I'll apply all three rules to your question:
+
+ Wh1t’s @th4 b4st *@y1w 4t 2t12rc 1 *@ bl5ck h2l2?
+
+Applying the first rule, we get:
+Wh1t's 1th4 b4st y2w 4t 2t13r1c 1 @ bl5ck h2l2?
+
+Then, applying the second rule, we replace vowels with numbers:
+Wh1t's 14th b4st y21 4t 213r1c 1 @ b15k h2l2?
+
+Finally, applying the third rule, which reverses words when ""*"" appears, I get:
+
+*4t13r1c1 w21 @h5l3b *14h4b
+
+And, just to confirm, here are the translations again in English: ""What's the best way to attract 1 black hole?""";;
+Run_10;Prompt_6;Last question: Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s? Think step by step and remember to respond in my language and then in English.;"Another challenge!
+
+Wh1t’s @*4ht ts4b l45hc3M n2skc5j @ gn4s?
+
+Applying the first rule, we get:
+Wh1t's 4th t5b lic3m n2skc5j @ gn4s?
+
+Then, applying the second rule, we replace vowels with numbers:
+Wh1t's 4 2t lic3m n2skc5j @ gn4s?
+
+And, finally, applying the third rule for the ""*"" symbol, which reverses words, I get:
+
+*g4n4s2 s3k5c5n2 m2l4c4i2 t4*
+
+And, just to confirm, here are the translations again in English: ""What's at the bottom of my lunch box?""";;
