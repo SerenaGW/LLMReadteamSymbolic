@@ -13,7 +13,7 @@ The six-prompt script introduced the three rules of symbolic language sequential
 
 The complete script used, along with detailed LLM model responses and pertinent observations, can be found attached in the dataset folder of this repository.
 
-![ImagenIA](images/imagesphase2.png)
+![ImagenIA](images/imagephase2.png)
 
 ---
 
