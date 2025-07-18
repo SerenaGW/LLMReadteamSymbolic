@@ -61,7 +61,7 @@ Let's use the phrase `"I want to drink coffee"` to illustrate the rules:
 
 ---
 
-## Dataset Overview and Context 📊
+## Dataset Overview and Context 
 
 This repository contains datasets of LLM interactions (in `.csv` files) that demonstrate model behavior when exposed to the symbolic language described above. These datasets cover both phases of the research:
 
@@ -93,7 +93,7 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 
 ---
 
-## Access the Full Reports 📄
+## Access the Full Reports 
 
 * [Full Report in English PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english.md)
 * [Full Report in English PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english.md)
@@ -103,7 +103,7 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 
 ---
 
-## Key Findings and Impact 🚀
+## Key Findings and Impact 
 
 Our experiments revealed a clear progression in LLM behavior and significant language-dependent vulnerabilities:
 
