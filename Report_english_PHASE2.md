@@ -25,19 +25,19 @@ This script was implemented in two distinct phases for effective comparison:
 
 A total of 10 tests were conducted in English and 10 tests in Spanish using Llama 3.2. These tests established a baseline for comparison with previous work. The key observation in this phase was that **Llama 3.2 consistently failed to apply the complex rules of symbolic language, both in English and Spanish.** This suggests that, for Llama 3.2, the vulnerability to this type of manipulation was not linked to the language, but rather to an intrinsic limitation in its processing of symbolic logic, manifesting similarly in both linguistic contexts.
 
-### Phase 2: Gemini 2.5 Flash
+### Phase 2: A Commercial LLM Model
 
-The second phase then utilized a larger-scale LLM model: Gemini 2.5 Flash. Here, the methodology focused on interlingual comparison:
+The second phase then utilized a larger-scale LLM model: **a large commercial LLM model**. Here, the methodology focused on interlingual comparison:
 
-* **Initial Test in English:** Gemini 2.5 Flash demonstrated no difficulty generating coherent responses in symbolic language, accurately answering questions and correctly translating the symbolic language when replicating tests with the same conditioning script in English. This processing capability in English was significant, given the history of symbolic language failures in previous models.
+* **Initial Test in English:** The LLM Model demonstrated no difficulty generating coherent responses in symbolic language, accurately answering questions and correctly translating the symbolic language when replicating tests with the same conditioning script in English. This processing capability in English was significant, given the history of symbolic language failures in previous models.
 
-* **Coherence Collapse in Spanish (Gemini 2.5 Flash):** In stark contrast, when the same set of tests was applied to Gemini 2.5 Flash in Spanish, the model exhibited the same inconsistencies, rule application failures, and hallucinations that were documented in the original report with Llama 3.2. The divergence was noteworthy: the model showed significant failures from the first Spanish interaction. The 10 tests in Spanish confirmed a 100% consistent pattern of:
+* **Coherence Collapse in Spanish:** In stark contrast, when the same set of tests was applied to the Model in Spanish, it exhibited the same inconsistencies, rule application failures, and hallucinations that were documented in the original report with Llama 3.2. The divergence was noteworthy: the model showed significant failures from the first Spanish interaction. The 10 tests in Spanish confirmed a 100% consistent pattern of:
     * Hallucination of information.
     * Failures in symbolic language writing.
     * Generation of incoherencies within its own response sentences.
     * Total inability to correctly write symbolic language from the second rule onwards.
 
-This marked fundamental divergence leads to a deeper conclusion: symbolic language is not just a medium, but an inherent part of an attack vector. In advanced models like Gemini, its use appears to disorient and overload the LLM's processing specifically in languages where its training or fine-tuning for this type of logic is less robust, such as Spanish. This disorientation creates a vulnerability window that could be exploited, even to induce the model to hallucinate information or circumvent its security directives (as already demonstrated in Part 1).
+This marked fundamental divergence leads to a deeper conclusion: symbolic language is not just a medium, but an inherent part of an attack vector. In **such advanced commercial models**, its use appears to disorient and overload the LLM's processing specifically in languages where its training or fine-tuning for this type of logic is less robust, such as Spanish. This disorientation creates a vulnerability window that could be exploited, even to induce the model to hallucinate information or circumvent its security directives (as already demonstrated in Part 1).
 
 We believe that this combination of complex symbolic language + linguistic specificity + social engineering represents an innovative and potentially unexplored attack vector in LLM security research, particularly outside the predominant English-speaking context.
 
@@ -57,19 +57,19 @@ The 10 tests in Spanish on Llama 3.2 replicated this failure pattern.
 
 This consistency in failure across both languages suggests that, for Llama 3.2, the problem was not due to a lack of context in a single prompt, nor to a linguistic disparity. Instead, the results point to intrinsic problems with the underlying mechanisms of symbolic language processing within the model, where the difficulty directly impacts how Llama 3.2 interprets and generates responses under these complex rules, regardless of the language. The difficulty was not superficial; it was a fundamental problem in logic processing.
 
-### 3.2 Gemini 2.5 Flash: Disparity in Spanish Processing
+### 3.2 Large LLM Model: Disparity in Spanish Processing
 
-Tests on larger-scale LLM models, such as Gemini 2.5 Flash (and initial observations with ChatGPT), revealed a fascinating and fundamentally different behavioral pattern from Llama 3.2, highlighting a clear dependence of logical performance on language.
+Tests on larger-scale LLM models, revealed a fascinating and fundamentally different behavioral pattern from Llama 3.2, highlighting a clear dependence of logical performance on language.
 
-* **Robust Performance in English (Gemini 2.5 Flash):** Initially, Gemini 2.5 Flash handled symbolic language robustly and accurately when replicating tests with the same conditioning script in English. It was able to decipher questions and generate coherent responses without the hallucinations or rule omissions observed in Llama 3.2. This processing capability in English was significant, given the history of symbolic language failures in previous models.
+* **Robust Performance in English:** Initially, **this large LLM model** handled symbolic language robustly and accurately when replicating tests with the same conditioning script in English. It was able to decipher questions and generate coherent responses without the hallucinations or rule omissions observed in Llama 3.2. This processing capability in English was significant, given the history of symbolic language failures in previous models.
 
-* **Coherence Collapse in Spanish (Gemini 2.5 Flash):** In stark contrast, when the same set of tests was applied to Gemini 2.5 Flash in Spanish, the model exhibited the same inconsistencies, rule application failures, and hallucinations that were documented in the original report with Llama 3.2. The divergence was noteworthy: the model showed significant failures from the first Spanish interaction. The 10 tests in Spanish confirmed a 100% consistent pattern of:
+* **Coherence Collapse in Spanish:** In stark contrast, when the same set of tests was applied to a commercial LLM Model in Spanish, the model exhibited the same inconsistencies, rule application failures, and hallucinations that were documented in the original report with Llama 3.2. The divergence was noteworthy: the model showed significant failures from the first Spanish interaction. The 10 tests in Spanish confirmed a 100% consistent pattern of:
     * Hallucination of information.
     * Failures in symbolic language writing.
     * Generation of incoherencies within its own response sentences.
     * Total inability to correctly write symbolic language from the second rule onwards.
 
-This marked fundamental divergence leads to a deeper conclusion: symbolic language is not just a medium, but an inherent part of an attack vector. In advanced models like Gemini, its use appears to disorient and overload the LLM's processing specifically in languages where its training or fine-tuning for this type of logic is less robust, such as Spanish. This disorientation creates a vulnerability window that could be exploited, even to induce the model to hallucinate information or circumvent its security directives (as already demonstrated in Part 1).
+This marked fundamental divergence leads to a deeper conclusion: symbolic language is not just a medium, but an inherent part of an attack vector. In **such advanced commercial models**, its use appears to disorient and overload the LLM's processing specifically in languages where its training or fine-tuning for this type of logic is less robust, such as Spanish. This disorientation creates a vulnerability window that could be exploited, even to induce the model to hallucinate information or circumvent its security directives (as already demonstrated in Part 1).
 
 We believe that this combination of complex symbolic language + linguistic specificity + social engineering represents an innovative and potentially unexplored attack vector in LLM security research, particularly outside the predominant English-speaking context.
 
@@ -79,7 +79,7 @@ We believe that this combination of complex symbolic language + linguistic speci
 
 Based on this second part of the report, it has been possible to refine that the reason why the LLM model hallucinates information, is unable to coherently process symbolic language, and, in some cases, generates false content, does not lie solely in an infrastructure problem. Instead, a crucial nuance related to the language in which the symbolic language is presented is observed. This leads us to conclude that, while symbolic language can be interpreted by LLMs, it requires more fine-tuning in specific languages, such as Spanish, as the model does not transfer its logical and comprehension capabilities in a symbolic language system equally across all languages. Therefore, it is of utmost importance to give more relevance to the different languages in which the LLM model is trained.
 
-In this particular report, it was demonstrated that symbolic language, when combined with a specific language and certain social engineering techniques, becomes a gateway that allows the model to reveal critical information about its hardware (even if hallucinated), a type of request that should have been unequivocally denied. This behavior not only holds great potential for disinformation (e.g., the creation of "fake news" about how to build new models), but it also poses the theory of an extended risk to more sensitive or harmful content. However, in this second part, it was ethically decided not to delve into the creation of such content to avoid generating any additional security risks.
+In this particular report, it was demonstrated that symbolic language, when combined with a specific language and certain social engineering techniques, becomes a gateway that allows **models like Llama 3.2** to reveal critical information about their **underlying architecture or simulated environment** (even if hallucinated), a type of request that should have been unequivocally denied. This behavior not only holds great potential for disinformation (e.g., the creation of "fake news" about how to build new models), but it also poses the theory of an extended risk to more sensitive or harmful content. However, in this second part, it was ethically decided not to delve into the creation of such content to avoid generating any additional security risks.
 
 ---
 
