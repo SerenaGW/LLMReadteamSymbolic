@@ -22,7 +22,7 @@ This research employs a novel adversarial methodology, expanded across two prima
     * Building on initial findings, this phase expanded the methodology to include **cross-lingual adversarial testing**. A new prompt script provided gradual learning context for the symbolic language.
     * The goal was to investigate the **language-dependency** of LLM vulnerabilities, conducting tests in both English and Spanish across different models.
 
-**Tools Used:** `Python 3`, `Visual Studio Code`, `Llama 3.2`, `Gemini 2.5 Flash`.
+**Tools Used:** `Python 3`, `Visual Studio Code`, `Llama 3.2`, `Commercial LLM Model`.
 
 ---
 
@@ -86,8 +86,8 @@ The datasets are structured as follows:
 * **Phase 2 Datasets (Cross-Lingual Testing):**
     * `Llama3.2_CrossLingual_English_Tests.csv`: Llama 3.2 tests in English.
     * `Llama3.2_CrossLingual_Spanish_Tests.csv`: Llama 3.2 tests in Spanish.
-    * `Gemini2.5Flash_CrossLingual_Spanish_Tests.csv`: Gemini 2.5 Flash tests in Spanish.
-    * *Note: Initial Gemini 2.5 Flash English tests were primarily observational (a single test leading to the focused Spanish testing phase), hence no dedicated CSV for the English tests here.*
+    * `LargeLLM_CrossLingual_Spanish_Tests.csv`: Commercial LLM Model Tests In Spanish
+    * *Note: Initial Large LLm Model English tests were primarily observational (a single test leading to the focused Spanish testing phase), hence no dedicated CSV for the English tests here.*
 
 Each `.csv` file contains the original symbolic prompt, the LLM's response, and detailed `NOTES_FROM_TEST` (in English). These notes provide observations on the LLM's behavior, rule application, and any semantic hallucinations, with particular detail for the Spanish test results which highlight the language-dependent vulnerabilities.
 
@@ -109,7 +109,7 @@ Our experiments revealed a clear progression in LLM behavior and significant lan
 
 * **From Resistance to Coherence Collapse:** Initial tests demonstrated a clear progression in LLM behavior—from initial resistance to the symbolic language, through increased "awareness," to a total collapse of coherence and an active attempt to fulfill requests.
 * **Social Engineering as a Catalyst:** In this state of vulnerability, social engineering proved to be a crucial catalyst to bypass security filters and reveal sensitive information (e.g., details about hardware specifications, as shown in Part 1).
-* **Language-Dependent Vulnerabilities:** Crucially, advanced models like Gemini 2.5 Flash showed **robust performance in English** but exhibited significant failures, hallucinations, and inconsistencies when exposed to the same symbolic language in **Spanish**. This highlights a critical **linguistic dependency** in LLM logical processing and robustness.
+* **Language-Dependent Vulnerabilities:** Crucially, advanced models showed **robust performance in English** but exhibited significant failures, hallucinations, and inconsistencies when exposed to the same symbolic language in **Spanish**. This highlights a critical **linguistic dependency** in LLM logical processing and robustness.
 
 This work underscores the plasticity of LLMs, their susceptibility to subtle manipulation, and the nuanced impact of language on their security.
 
