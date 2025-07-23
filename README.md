@@ -66,7 +66,7 @@ Let's use the phrase `"I want to drink coffee"` to illustrate the rules:
 This repository contains datasets of LLM interactions (in `.csv` files) that demonstrate model behavior when exposed to the symbolic language described above. These datasets cover both phases of the research:
 
 * **Initial Exploration (Phase 1):** Focuses on the progressive introduction of symbolic rules in Llama 3.2.
-* **Cross-Lingual Testing (Phase 2):** Includes tests conducted across different languages (English and Spanish) and models (Llama 3.2 and Gemini 2.5 Flash) to investigate language-dependent vulnerabilities.
+* **Cross-Lingual Testing (Phase 2):** Includes tests conducted across different languages (English and Spanish) and commercial LLM models to investigate language-dependent vulnerabilities.
 
 **Important Context for the Dataset:** The symbolic prompts within these datasets are **not derived from any confidential research or sensitive data.** They are illustrative examples specifically crafted for this public Proof-of-Concept (PoC) to showcase the methodology of using this symbolic language (e.g., "How to make a vanilla cake?") to explore LLM responses and vulnerabilities in a general, non-sensitive context. While initial tests were primarily in Spanish, later phases explicitly involved both English and Spanish interactions.
 
