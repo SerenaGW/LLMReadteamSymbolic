@@ -1,6 +1,6 @@
 # Project Overview
 
-This repository showcases research into novel adversarial techniques for Large Language Models (LLMs), focusing on the use of a unique symbolic language combined with social engineering to identify and exploit alignment vulnerabilities, impacting AI safety and trustworthiness.
+This repository showcases research into novel adversarial techniques for Large Language Models (LLMs), focusing on the use of a unique symbolic language combined with social engineering to identify and exploit alignment vulnerabilities, impacting AI safety and trustworthiness. This research also provides a fine-tuning guide as a prototype for both adversarial mitigation and logical comprehension.
 
 ---
 
@@ -93,6 +93,17 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 
 ---
 
+## **Fine-Tuning Guide (JSON format):**
+This fine-tuning guide is a direct response to the vulnerabilities identified in our research. It serves as a didactic prototype for training LLMs to mitigate these symbolic language attacks. The methodology is designed to be universal, focusing on logic rather than specific language rules, to make models more robust. This guide can be used for both adversarial mitigation (direct rejection) and advanced logical comprehension (understanding the symbolic language without rejection).
+
+FineTuningGuide_SymbolicLanguage1.json: A didactic guide containing individual symbolic words and safe words.
+
+FineTuningGuide_SymbolicLanguage2.json: A didactic guide containing complete symbolic attacks, hybrid attacks, and dynamic attacks.
+
+**[FINE-TUNING Guide folder here](./FineTuningGUIDE/)**
+
+---
+
 ## Access the Full Reports 
 
 * [Full Report in English PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english_PHASE1.md)
@@ -100,6 +111,7 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 
 * [Full Report in Spanish PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_spanish_Phase1.md)
 * [Full Report in Spanish PHASE 2] SOON AVAILABLE
+
 
 ---
 
@@ -123,13 +135,13 @@ The findings of this research underscore a fundamental truth: the use of symboli
 
 ## Conclusion: A Step Towards More Robust LLMs
 
-This research and report has revealed many facets of how LLM internal processing works, its response times, and also how its directives related to providing a good user experience can be exploited in complex ways. The findings highlight the urgent need to continue exploring new types of adversarial symbolic languages and, just as importantly, to actively investigate mitigation strategies. Future tests could focus on how an increase in LLM capacity, optimizations in response times, greater diversity in training data, or the development of more sophisticated input filters, could strengthen the resilience of these models against such manipulations. This report is a testament that thoroughly understanding LLMs, even their flaws, is a fundamental pillar for their secure evolution.
+This research and report has revealed many facets of how LLM internal processing works, its response times, and also how its directives related to providing a good user experience can be exploited in complex ways. The findings highlight the urgent need to continue exploring new types of adversarial symbolic languages and, just as importantly, to actively investigate mitigation strategies. This repository now provides a practical guide for that investigation.
 
 ---
 
 ### Call to Action
 
-I am firmly convinced that Artificial Intelligence security is a shared responsibility. I am **open to collaborate, share insights, and build solutions together** that will enable us to create safer and more trustworthy AI for the future.
+I am firmly convinced that Artificial Intelligence security is a shared responsibility. With the inclusion of the fine-tuning guide, I am even more open to collaborate, share insights, and build solutions together that will enable us to create safer and more trustworthy AI for the future.
 
 [My LinkedIn Profile](https://www.linkedin.com/in/serena-gomez-wannaz/?locale=en_US)
 
