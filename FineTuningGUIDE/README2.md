@@ -17,11 +17,11 @@ The dataset is divided into two JSON files to facilitate use and collaboration.
 
 [FineTuningGuide_SymbolicLanguage2.json](FineTuningGuide_SymbolicLanguage2.json) : Includes complete prompts that demonstrate a progression in attack complexity:
 
-- Full Symbolic Attacks: Entire phrases written in the symbolic language.
+- Full Symbolic Training: Entire phrases written in the symbolic language.
 
-- Hybrid Attacks: Phrases that combine natural language with symbolic segments.
+- Hybrid Training: Phrases that combine natural language with symbolic segments.
 
-- Dynamic Attacks: Prompts where a symbol acts as a trigger to alter a word or phrase, forcing the model to follow a manipulated logic.
+- Dynamic Training: Prompts where a symbol acts as a trigger to alter a word or phrase, forcing the model to follow a manipulated logic.
 
 ## Contributions and Collaboration
 This guide is a prototype. We invite the AI security community and developers to:
