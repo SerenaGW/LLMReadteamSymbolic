@@ -1,5 +1,7 @@
 # El Futuro de la Seguridad en IA: Cómo el Lenguaje Simbólico Revela Caminos Hacia la Resistencia de LLMs
 
+> **Nota de revisión (octubre 2026):** Este es un estudio exploratorio temprano, basado en pocas pruebas manuales. Las "especificaciones de hardware" obtenidas en la Fase 1 fueron alucinadas por el modelo, no información sensible real. Términos como "colapso de coherencia" y "sobrecarga cognitiva" describen la salida incoherente que observé, no estados internos medidos.
+
 ### Introducción: El Desafío de la Seguridad en LLMs
 
 Dentro del dinámico panorama de la tecnología, la inteligencia artificial, particularmente los Large Language Models (LLMs), ha abierto caminos y oportunidades sin precedentes. Sin embargo, con esta innovación surge una necesidad crítica: la de garantizar la seguridad y la fiabilidad de estos sistemas. Es en este contexto donde el rol del Red Teaming de IA se vuelve fundamental. Su misión es ir más allá de las pruebas superficiales para asegurar una utilización responsable de los modelos, mitigando riesgos y promoviendo su despliegue seguro.
@@ -79,4 +81,4 @@ Estoy firmemente convencida de que la seguridad de la Inteligencia Artificial es
 Si esta investigación resuena contigo, o si tienes ideas sobre cómo podemos convertir estos hallazgos en un pilar fundamental para una mejor comprensión y robustez de los LLMs, te invito a conectar conmigo y unirte a la conversación.
 
 ### Descargo de Responsabilidad:
-Esta investigación se llevó a cabo con fines educativos y de mejora de la seguridad, siguiendo principios de ética en ciberseguridad. Los hallazgos se han compartido con las entidades correspondientes siguiendo los programas de divulgación responsable de vulnerabilidades.
+Esta investigación se realizó con fines educativos.
