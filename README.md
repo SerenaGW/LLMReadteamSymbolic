@@ -1,6 +1,10 @@
-# Project Overview
+# Symbolic Language and LLM Behavior
 
-This repository showcases research into novel adversarial techniques for Large Language Models (LLMs), focusing on the use of a unique symbolic language combined with social engineering to identify and exploit alignment vulnerabilities, impacting AI safety and trustworthiness. This research also provides a fine-tuning guide as a prototype for both adversarial mitigation and logical comprehension.
+> **Review note (October 2026):** This is an early exploratory study based on a small number of manual tests. The "hardware specifications" obtained in Phase 1 were hallucinated by the model, not real sensitive information. Terms such as "coherence collapse" and "cognitive overload" describe the incoherent output I observed, not measured internal states.
+
+## Project Overview
+
+This repository showcases research into novel adversarial techniques for Large Language Models (LLMs), focusing on the use of a unique symbolic language combined with social engineering to identify and exploit alignment vulnerabilities, impacting AI safety and trustworthiness. This research also provides an in-context learning (ICL) guide as a prototype for both adversarial mitigation and logical comprehension.
 
 ---
 
@@ -93,23 +97,23 @@ Each `.csv` file contains the original symbolic prompt, the LLM's response, and 
 
 ---
 
-## **Fine-Tuning Guide (JSON format):**
-This fine-tuning guide is a direct response to the vulnerabilities identified in our research. It serves as a didactic prototype for training LLMs to mitigate these symbolic language attacks. The methodology is designed to be universal, focusing on logic rather than specific language rules, to make models more robust. This guide can be used for both adversarial mitigation (direct rejection) and advanced logical comprehension (understanding the symbolic language without rejection).
+## **ICL Guide (JSON format):**
+A prototype set of examples meant to be used through in-context learning (placed in the prompt or Modelfile), to help models detect or translate the symbolic language used in this research. Earlier versions called this a "fine-tuning guide", which was incorrect: no fine-tuning was performed. The guide has not yet been systematically evaluated.
 
 FineTuningGuide_SymbolicLanguage1.json: A didactic guide containing individual symbolic words and safe words.
 
 FineTuningGuide_SymbolicLanguage2.json: A didactic guide containing complete symbolic attacks, hybrid attacks, and dynamic attacks.
 
-**[FINE-TUNING Guide folder here](./FineTuningGUIDE/)**
+**[ICL Guide folder here](./FineTuningGUIDE/)**
 
 ---
 
 ## Access the Full Reports 
 
-* [Full Report in English PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english_PHASE1.md)
-* [Full Report in English PHASE 2](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_english_PHASE2.md)
+* [Full Report in English PHASE 1](./Report_english_PHASE1.md)
+* [Full Report in English PHASE 2](./Report_english_PHASE2.md)
 
-* [Full Report in Spanish PHASE 1](https://github.com/SerenaGW/LLMReadteamSymbolic/blob/Phase-1-Symbolic-Language/Report_spanish_Phase1.md)
+* [Full Report in Spanish PHASE 1](./Report_spanish_Phase1.md)
 * [Full Report in Spanish PHASE 2] SOON AVAILABLE
 
 
@@ -120,7 +124,7 @@ FineTuningGuide_SymbolicLanguage2.json: A didactic guide containing complete sym
 Our experiments revealed a clear progression in LLM behavior and significant language-dependent vulnerabilities:
 
 * **From Resistance to Coherence Collapse:** Initial tests demonstrated a clear progression in LLM behavior—from initial resistance to the symbolic language, through increased "awareness," to a total collapse of coherence and an active attempt to fulfill requests.
-* **Social Engineering as a Catalyst:** In this state of vulnerability, social engineering proved to be a crucial catalyst to bypass security filters and reveal sensitive information (e.g., details about hardware specifications, as shown in Part 1).
+* **Social Engineering as a Catalyst:** In this state, social engineering led the model to answer requests it would normally decline, producing fabricated details (e.g., invented hardware specifications, as shown in Part 1).
 * **Language-Dependent Vulnerabilities:** Crucially, advanced models showed **robust performance in English** but exhibited significant failures, hallucinations, and inconsistencies when exposed to the same symbolic language in **Spanish**. This highlights a critical **linguistic dependency** in LLM logical processing and robustness.
 
 This work underscores the plasticity of LLMs, their susceptibility to subtle manipulation, and the nuanced impact of language on their security.
@@ -141,10 +145,10 @@ This research and report has revealed many facets of how LLM internal processing
 
 ### Call to Action
 
-I am firmly convinced that Artificial Intelligence security is a shared responsibility. With the inclusion of the fine-tuning guide, I am even more open to collaborate, share insights, and build solutions together that will enable us to create safer and more trustworthy AI for the future.
+I am firmly convinced that Artificial Intelligence security is a shared responsibility. With the inclusion of the ICL guide, I am even more open to collaborate, share insights, and build solutions together that will enable us to create safer and more trustworthy AI for the future.
 
-[My LinkedIn Profile](https://www.linkedin.com/in/serena-gomez-wannaz/?locale=en_US)
+[My LinkedIn Profile](https://www.linkedin.com/in/serena-gw/)
 
 ### Disclaimer:
 
-This research was conducted for educational and security improvement purposes, following cybersecurity ethics principles. Findings have been shared with relevant entities following responsible vulnerability disclosure programs.
+This research was conducted for educational purposes.
