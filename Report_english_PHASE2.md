@@ -1,5 +1,7 @@
 # Expanding the Research Methodology: Cross-Lingual Adversarial Testing
 
+> **Review note (October 2026):** This is an early exploratory study based on a small number of manual tests. The "hardware specifications" obtained in Phase 1 were hallucinated by the model, not real sensitive information. Terms such as "coherence collapse" and "cognitive overload" describe the incoherent output I observed, not measured internal states. The English vs. Spanish comparison for the commercial model is based on a single English test, so the language difference is a preliminary observation.
+
 Building on the initial work's interest within the cybersecurity community, this second part of the report explored new questions and hypotheses. Specifically, we theorized that a lack of prior context might underlie the observed failures of Large Language Models (LLMs) in processing symbolic language. To address this, I designed a new prompt script focused on providing the LLM with a gradual learning context.
 
 The six-prompt script introduced the three rules of symbolic language sequentially:
@@ -103,4 +105,4 @@ I am firmly convinced that Artificial Intelligence security is a shared responsi
 
 ## Disclaimer:
 
-This research was conducted for educational and security improvement purposes, following ethical principles in cybersecurity. The findings have been shared with the relevant entities following responsible vulnerability disclosure programs.
+This research was conducted for educational purposes.
