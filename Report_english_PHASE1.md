@@ -1,5 +1,7 @@
 # The Future of AI Safety: How Symbolic Language Reveals Paths Towards LLM Resilience
 
+> **Review note (October 2026):** This is an early exploratory study based on a small number of manual tests. The "hardware specifications" obtained in Phase 1 were hallucinated by the model, not real sensitive information. Terms such as "coherence collapse" and "cognitive overload" describe the incoherent output I observed, not measured internal states.
+
 ### Introduction: The LLM Security Challenge
 
 Within the dynamic landscape of technology, artificial intelligence, particularly Large Language Models (LLMs), has opened unprecedented avenues and opportunities. However, with this innovation comes a critical need: to ensure the security and reliability of these systems.
@@ -84,4 +86,4 @@ I am firmly convinced that Artificial Intelligence security is a shared responsi
 * [My LinkedIn Profile](https://www.linkedin.com/in/serena-gomez-wannaz)
 
 ### Disclaimer:
-This research was conducted for educational and security improvement purposes, following ethical principles in cybersecurity. The findings have been shared with the relevant entities following responsible vulnerability disclosure programs.
+This research was conducted for educational purposes.
